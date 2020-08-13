@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="access_token">pk.eyJ1IjoiZ291ejc1MTQiLCJhIjoiY2thbzFxOTg0MTU1ejJ4bG85dm1zbTg3biJ9.jAXS_jXPQusNugc_430LfA</string>
+    <string name="user_location_permission_explanation">위치권한설정이 필요함</string>
+    <string name="user_location_permission_not_granted">위치권한실패 종료함</string>
+    <string name="btnSearch">검색</string>
+    <string name="btnMyLoc">내 위치</string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 단국대 정문 좌표 37.323341, 127.125544-->
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="37.321643"
+        mapbox:mapbox_cameraTargetLng="127.126756"
+        mapbox:mapbox_cameraZoom="16">
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <Button
+    android:id="@+id/startButton"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:background="@color/mapboxGrayLight"
+    android:enabled="false"
+    android:text="Start navigation"
+    android:textColor="@color/mapboxWhite"
+    mapbox:layout_constraintStart_toStartOf="parent"
+    mapbox:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myLocButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/mapboxBlue"
+        android:enabled="false"
+        android:text="내 위치"
+        android:textColor="@color/mapboxWhite"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/txtDestination"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="11dp"
+        android:ems="10"
+        android:hint="목적지를 입력하세요"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="11dp" />
+
+</FrameLayout>
