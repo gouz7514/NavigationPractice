@@ -122,9 +122,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
-        editText =(EditText)findViewById(R.id.txtDestination);
+        //editText =(EditText)findViewById(R.id.txtDestination);
+//        editText =(EditText)findViewById(R.id.txtDestination);
 
-        startButton = findViewById(R.id.startButton);
+        startButton = findViewById(R.id.btnStartNavigation);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,20 +140,22 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
 
         // 내 위치로 카메라 이동
-        // TODO : 이거 왜 안될까
-        mylocButton = findViewById(R.id.myLocButton);
+        mylocButton = findViewById(R.id.btnMyLoc);
         mylocButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CameraPosition position = new CameraPosition.Builder()
                         .target(new LatLng(La, Lo)) // Sets the new camera position
-                        .zoom(13) // Sets the zoom , 줌 정도 숫자가 클수록 더많이 줌함
+                        .zoom(17) // Sets the zoom , 줌 정도 숫자가 클수록 더많이 줌함
                         .bearing(180) // Rotate the camera , 카메라 방향(북쪽이 0) 북쪽부터 시계방향으로 측정
                         .tilt(0) // Set the camera tilt , 각도
                         .build(); // Creates a CameraPosition from the builder
                 //카메라 움직이기
                 mapboxMap.animateCamera(CameraUpdateFactory
                         .newCameraPosition(position), 7000);
+
+                // TODO : 내위치 버튼 클릭하면 위도, 경도 대신 실제 주소 띄워보기
+                Geocoder g = new Geocoder(getApplicationContext());
                 Toast.makeText(getApplicationContext(), String.format("            내위치 \n위도 : " + La + "\n경도 : "+Lo), Toast.LENGTH_SHORT).show();
             }
         });
@@ -174,40 +177,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
     }
 
-//    @Override
-//    public void onMapReady(@NonNull final MapboxMap mapboxMap) {
-//        this.mapboxMap = mapboxMap;
-//        mapboxMap.setStyle(getString(R.string.navigation_guidance_day), new Style.OnStyleLoaded() {
-//            @Override
-//            public void onStyleLoaded(@NonNull Style style) {
-//                enableLocationComponent(style);
-//
-//                addDestinationIconSymbolLayer(style);
-//
-//                mapboxMap.addOnMapClickListener(MainActivity.this);
-//                // TODO : 이 부분을 oncreate 로 옮겨보자 : 왜 옮기면 안 돌아감??
-//                button = findViewById(R.id.startButton);
-//                button.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        boolean simulateRoute = true;
-//                        NavigationLauncherOptions options = NavigationLauncherOptions.builder()
-//                                .directionsRoute(currentRoute) // Detailed information about an individual route such as the duration, distance and geometry.
-////                                .shouldSimulateRoute(simulateRoute) // 이거 있으면 지 혼자 시뮬레이션 돌아감
-//                                .build();
-//                        // Call this method with Context from within an Activity
-//                        NavigationLauncher.startNavigation(MainActivity.this, options);
-//                    }
-//                });
-//
-//            }
-//        });
-//    }
-
     // 클릭시 마커 추가
     private void addDestinationIconSymbolLayer(@NonNull Style loadedMapStyle) {
         loadedMapStyle.addImage("destination-icon-id",
                 BitmapFactory.decodeResource(this.getResources(), R.drawable.mapbox_marker_icon_default));
+        // TODO : 지도상 클릭시 "경로가 화면상에 표시되면 버튼 누르세요" 메시지 추가해보기
+        Toast.makeText(this, R.string.route_finding, Toast.LENGTH_LONG).show();
         GeoJsonSource geoJsonSource = new GeoJsonSource("destination-source-id");
         loadedMapStyle.addSource(geoJsonSource);
         SymbolLayer destinationSymbolLayer = new SymbolLayer("destination-symbol-layer-id", "destination-source-id");
@@ -219,24 +194,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         loadedMapStyle.addLayer(destinationSymbolLayer);
     }
 
-    // TODO : KHJ 지도 클릭시 해당 목적지까지 경로 찾기
-//    @Override
-//    public boolean onMapClick(@NonNull LatLng point) {
-//
-//        Point destinationPoint = Point.fromLngLat(point.getLongitude(), point.getLatitude());
-//        Point originPoint = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(),
-//                locationComponent.getLastKnownLocation().getLatitude());
-//
-//        GeoJsonSource source = mapboxMap.getStyle().getSourceAs("destination-source-id");
-//        if (source != null) {
-//            source.setGeoJson(Feature.fromGeometry(destinationPoint));
-//        }
-//
-//        getRoute(originPoint, destinationPoint);
-//        button.setEnabled(true);
-//        button.setBackgroundResource(R.color.mapboxBlue);
-//        return true;
-//    }
     @Override
     //지도 클릭시 자동 길찾기
     public boolean onMapClick(@NonNull LatLng point) {
@@ -255,26 +212,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         return false;
     }
 
-//    @Override
-//    //지도 클릭시 자동 길찾기
-//    public boolean onMapClick(@NonNull LatLng point) {
-//        if (destinationMarker != null) {
-//            mapboxMap.removeMarker(destinationMarker);
-//        }
-//
-//        destinationMarker = mapboxMap.addMarker(new MarkerOptions().position(point));//마커 추가
-//        destinatonPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());//클릭한곳의 좌표
-//        originPosition = Point.fromLngLat(Lo, La);//현재 좌표
-//
-//        getRoute(originPosition, destinatonPosition);
-//        getRoute_walking(originPosition, destinatonPosition);   //도보 길찾기
-//        getRoute_navi_walking(originPosition, destinatonPosition);//도보 네비게이션
-//        button.setEnabled(true);   //네비게이션 버튼 활성화
-//        button.setBackgroundResource(R.color.mapboxBlue);
-//
-//
-//        return true;
-//    }
 
     // 길찾기 함수 - 여기를 바꾸면 되겠구나
     private void getRoute(Point origin, Point destination) {
@@ -343,25 +280,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         locationEngine.requestLocationUpdates(request, callback, getMainLooper());
         locationEngine.getLastLocation(callback);
     }
-//    public void map_search(View view) {
-//        Log.e(TAG,"map_search 실행");
-//        showDialog2(view);
-//    }
-
-    // TODO : 이거는 음성인식할 때 사용?
-    // 목적지 주소값을 통해 목적지 위도 경도를 얻어오는 구문
-//    public void getPointFromGeoCoder(String destinationxy) {
-//        Log.e(TAG,"지오코더 실행");
-//        Geocoder geocoder = new Geocoder(this);
-//        List<Address> listAddress = null;
-//        try {
-//            listAddress = geocoder.getFromLocationName(destinationxy, 1);
-//            destinationX = listAddress.get(0).getLongitude();
-//            destinationY = listAddress.get(0).getLatitude();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     //안드로이드 기기 위치 추적
     //현재 위치 얻어오는 콜백
@@ -376,6 +294,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
          */
         // OnSuccess()가 장치 위치의 변경을 식별 할 때마다 실행
         // result.getLastLocation()가 Location객체를주고 그 객체는 위도와 경도 값을 가지고 있습니다.
+
         @Override
         public void onSuccess(LocationEngineResult result) {
             Log.e(TAG,"onSuccess 실행");

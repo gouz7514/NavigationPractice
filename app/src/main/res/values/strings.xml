@@ -3,6 +3,8 @@
     <string name="access_token">pk.eyJ1IjoiZ291ejc1MTQiLCJhIjoiY2thbzFxOTg0MTU1ejJ4bG85dm1zbTg3biJ9.jAXS_jXPQusNugc_430LfA</string>
     <string name="user_location_permission_explanation">위치권한설정이 필요함</string>
     <string name="user_location_permission_not_granted">위치권한실패 종료함</string>
+    <string name="route_finding">경로가 화면상에 표시되면 "길 안내 시작" 버튼을 클릭하세요.</string>
     <string name="btnSearch">검색</string>
     <string name="btnMyLoc">내 위치</string>
+    <string name="btnStartNavigation">길 안내 시작</string>
 </resources>
