@@ -5,49 +5,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!-- 단국대 정문 좌표 37.323341, 127.125544-->
+
+<!--    <android.support.v7.widget.CardView-->
+<!--        android:id="@+id/idCardView"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="5dp"-->
+<!--        app:cardCornerRadius="4dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <fragment-->
+<!--            android:id="@+id/autocomplete_fragment"-->
+<!--            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+<!--            android:layout_width="301dp"-->
+<!--            android:layout_height="wrap_content" />-->
+<!--    </android.support.v7.widget.CardView>-->
+
+
+
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         mapbox:mapbox_cameraTargetLat="37.321643"
         mapbox:mapbox_cameraTargetLng="127.126756"
-        mapbox:mapbox_cameraZoom="16">
-
-
-    </com.mapbox.mapboxsdk.maps.MapView>
-
+        mapbox:mapbox_cameraZoom="16"></com.mapbox.mapboxsdk.maps.MapView>
 
     <Button
         android:id="@+id/btnStartNavigation"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="382dp"
+        android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:background="@color/mapboxGrayLight"
         android:enabled="false"
         android:text="@string/btnStartNavigation"
         android:textColor="@color/mapboxWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintVertical_bias="0.96"
         mapbox:layout_constraintStart_toStartOf="parent"
         mapbox:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnMyLoc"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnSearch"
+        android:layout_width="78dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/button_background"
+        android:gravity="right"
+        android:onClick="map_search"
+        android:paddingTop="20dp"
+        android:text="@string/btnSearch"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapView" />
+
+    <EditText
+        android:id="@+id/txtDestination"
+        android:layout_width="194dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:ems="10"
+        android:hint="목적지를 입력하세요"
+        android:inputType="textPersonName"
+        app:layout_constraintHorizontal_bias="0.0"
+        mapbox:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/btnDKU"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:background="@color/mapboxBlue"
+        android:text="@string/btnDKU"
+        android:textColor="@color/mapboxWhite"
+        app:layout_constraintEnd_toStartOf="@+id/btnMyLoc"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+
+    <Button
+        android:id="@+id/btnMyLoc"
+        android:layout_width="78dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
         android:background="@color/mapboxBlue"
         android:text="@string/btnMyLoc"
         android:textColor="@color/mapboxWhite"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStartNavigation" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,14 +9,22 @@ import android.os.Bundle;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
+import java.util.Arrays;
 import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 // classes needed to initialize map
+import com.google.android.gms.common.api.Status;
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.api.net.PlacesClient;
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
+import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
 import com.mapbox.android.core.location.LocationEngine;
 import com.mapbox.android.core.location.LocationEngineCallback;
 import com.mapbox.android.core.location.LocationEngineProvider;
@@ -98,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Point originPosition;
     private Point destinatonPosition;
     private MapboxDirections client;
-    private Button startButton, mylocButton;
+    private Button startButton, mylocButton, dkuButton;
 
 
     EditText editText;
@@ -110,6 +118,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     // 학교 중앙 좌표
     // 37.321229, 127.127432
+    public static double DKULa = 37.321229;
+    public static double DKULo = 127.127432;
+
+    // 자동 완성
+    //String TAG = "placeautocomplete";
+    static TextView txtView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,10 +169,57 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         .newCameraPosition(position), 7000);
 
                 // TODO : 내위치 버튼 클릭하면 위도, 경도 대신 실제 주소 띄워보기
-                Geocoder g = new Geocoder(getApplicationContext());
-                Toast.makeText(getApplicationContext(), String.format("            내위치 \n위도 : " + La + "\n경도 : "+Lo), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), String.format("내 위치로 이동합니다."), Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), String.format("            내위치 \n위도 : " + La + "\n경도 : "+Lo), Toast.LENGTH_SHORT).show();
             }
         });
+
+        // 0819 : 학교 위치로 카메라 이동 - 성공
+        dkuButton = findViewById(R.id.btnDKU);
+        dkuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CameraPosition position = new CameraPosition.Builder()
+                        .target(new LatLng(DKULa, DKULo)) // Sets the new camera position
+                        .zoom(16) // Sets the zoom , 줌 정도 숫자가 클수록 더많이 줌함
+                        .bearing(180) // Rotate the camera , 카메라 방향(북쪽이 0) 북쪽부터 시계방향으로 측정
+                        .tilt(0) // Set the camera tilt , 각도
+                        .build(); // Creates a CameraPosition from the builder
+                //카메라 움직이기
+                mapboxMap.animateCamera(CameraUpdateFactory
+                        .newCameraPosition(position), 7000);
+
+                Toast.makeText(getApplicationContext(), String.format("학교 위치로 이동합니다."), Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+        // TODO : 장소 자동완성
+//        Button search = findViewById(R.id.btnSearch);
+//        search.bringToFront();
+//        txtView = findViewById(R.id.txtDestination);
+//
+//        Places.initialize(getApplicationContext(), "AIzaSyCVXwfS2pdm-KGbqvXc30RB8jGGJZ58mtc");
+//        // Create a new Places client instance.
+//        PlacesClient placesClient = Places.createClient(this);
+//        // Initialize the AutocompleteSupportFragment.
+//        AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
+//                getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
+//        // Specify the types of place data to return.
+//        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME));
+//        // Set up a PlaceSelectionListener to handle the response.
+//        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+//            @Override
+//            public void onPlaceSelected(Place place) {
+//                txtView.setText(place.getName());
+//                Log.i(TAG, "Place: " + place.getName() + ", " + place.getId());
+//            }
+//
+//            @Override
+//            public void onError(@NonNull Status status) {
+//                Log.i(TAG, "An error occurred: " + status);
+//            }
+//        });
 
     }
 

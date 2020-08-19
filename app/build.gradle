@@ -40,5 +40,9 @@ dependencies {
     implementation 'com.mapbox.mapboxsdk:mapbox-android-core:2.0.1'
     implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.42.6'
 
+    // 장소 자동완성
+    implementation 'com.google.android.libraries.places:places:2.3.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
 
 }

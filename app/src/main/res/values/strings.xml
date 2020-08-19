@@ -6,5 +6,6 @@
     <string name="route_finding">경로가 화면상에 표시되면 "길 안내 시작" 버튼을 클릭하세요.</string>
     <string name="btnSearch">검색</string>
     <string name="btnMyLoc">내 위치</string>
+    <string name="btnDKU">학교 지도</string>
     <string name="btnStartNavigation">길 안내 시작</string>
 </resources>
