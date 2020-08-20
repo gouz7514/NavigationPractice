@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.location.Address;
 import android.location.Geocoder;
@@ -9,11 +10,13 @@ import android.os.Bundle;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.speech.RecognizerIntent;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -105,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Marker destinationMarker;
     private Point originPosition;
     private Point destinatonPosition;
+    private Point searchedPosition;
     private MapboxDirections client;
     private Button startButton, mylocButton, dkuButton;
 
@@ -136,8 +140,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
 
-        //editText =(EditText)findViewById(R.id.txtDestination);
-//        editText =(EditText)findViewById(R.id.txtDestination);
+        editText =(EditText)findViewById(R.id.txtDestination);
 
         startButton = findViewById(R.id.btnStartNavigation);
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -174,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
-        // 0819 : 학교 위치로 카메라 이동 - 성공
+        // 학교 위치로 카메라 이동
         dkuButton = findViewById(R.id.btnDKU);
         dkuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -193,33 +196,58 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
+        // 장소 자동완성
 
-        // TODO : 장소 자동완성
-//        Button search = findViewById(R.id.btnSearch);
-//        search.bringToFront();
-//        txtView = findViewById(R.id.txtDestination);
-//
-//        Places.initialize(getApplicationContext(), "AIzaSyCVXwfS2pdm-KGbqvXc30RB8jGGJZ58mtc");
-//        // Create a new Places client instance.
-//        PlacesClient placesClient = Places.createClient(this);
-//        // Initialize the AutocompleteSupportFragment.
-//        AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
-//                getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
-//        // Specify the types of place data to return.
-//        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME));
-//        // Set up a PlaceSelectionListener to handle the response.
-//        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-//            @Override
-//            public void onPlaceSelected(Place place) {
-//                txtView.setText(place.getName());
-//                Log.i(TAG, "Place: " + place.getName() + ", " + place.getId());
-//            }
-//
-//            @Override
-//            public void onError(@NonNull Status status) {
-//                Log.i(TAG, "An error occurred: " + status);
-//            }
-//        });
+        Button search = findViewById(R.id.btnSearch);
+        search.bringToFront();
+        // TODO : TEST : 이게 되나?
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getPointFromGeoCoder(editText.getText().toString());
+                originPosition = Point.fromLngLat(Lo, La);//현재 좌표
+                searchedPosition = Point.fromLngLat(destinationX, destinationY);
+                getRoute(originPosition, searchedPosition);
+                // (Lo+destinationX)/2, (La+destinationY)/2
+                startButton.setEnabled(true);
+                startButton.setBackgroundResource(R.color.mapboxBlue);
+                Log.i(TAG, "중간 지점 위도 : " + (Lo+destinationX)/2 + " 중간 지점 경도 : " + (La+destinationY)/2);
+                CameraPosition position = new CameraPosition.Builder()
+                        .target(new LatLng(destinationY, destinationX)) // Sets the new camera position
+                        .zoom(16) // Sets the zoom , 줌 정도 숫자가 클수록 더많이 줌함
+                        .bearing(0) // Rotate the camera , 카메라 방향(북쪽이 0) 북쪽부터 시계방향으로 측정
+                        .tilt(0) // Set the camera tilt , 각도
+                        .build(); // Creates a CameraPosition from the builder
+                //카메라 움직이기
+                mapboxMap.animateCamera(CameraUpdateFactory
+                        .newCameraPosition(position), 7000);
+            }
+        });
+
+        txtView = findViewById(R.id.txtDestination);
+
+        Places.initialize(getApplicationContext(), "AIzaSyCVXwfS2pdm-KGbqvXc30RB8jGGJZ58mtc");
+        // Create a new Places client instance.
+        PlacesClient placesClient = Places.createClient(this);
+        // Initialize the AutocompleteSupportFragment.
+        AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
+                getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
+        // Specify the types of place data to return.
+        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME));
+        // Set up a PlaceSelectionListener to handle the response.
+        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(Place place) {
+                txtView.setText(place.getName()); // 0820 : edittext 부분에 목적지 설정됨
+//                Log.e(TAG, String.valueOf(place.getLatLng()));
+                Log.i(TAG, "Place: " + place.getName() + ", " + place.getId());
+            }
+
+            @Override
+            public void onError(@NonNull Status status) {
+                Log.i(TAG, "An error occurred: " + status);
+            }
+        });
 
     }
 
@@ -342,6 +370,21 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         locationEngine.getLastLocation(callback);
     }
 
+
+    // TODO : 검색 버튼 클릭시 해당 위치 지도에서 찾아서 마커 표시하도록 하기
+
+//    public void map_search(View view) {
+//        getPointFromGeoCoder(editText.getText().toString());
+//        originPosition = Point.fromLngLat(Lo, La);//현재 좌표
+//        searchedPosition = Point.fromLngLat(destinationX, destinationY);
+//        getRoute(originPosition, searchedPosition);
+//        // (Lo+destinationX)/2, (La+destinationY)/2
+//        startButton.setEnabled(true);
+//        startButton.setBackgroundResource(R.color.mapboxBlue);
+//    }
+
+
+
     //안드로이드 기기 위치 추적
     //현재 위치 얻어오는 콜백
     class MainActivityLocationCallback implements LocationEngineCallback<LocationEngineResult> {
@@ -389,6 +432,20 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Toast.makeText(activity, exception.getLocalizedMessage(),
                         Toast.LENGTH_SHORT).show();
             }
+        }
+    }
+
+    // 목적지 주소값을 통해 목적지 위도 경도를 얻어오는 구문
+    public void getPointFromGeoCoder(String destinationxy) {
+        Log.e(TAG,"지오코더 실행");
+        Geocoder geocoder = new Geocoder(this);
+        List<Address> listAddress = null;
+        try {
+            listAddress = geocoder.getFromLocationName(destinationxy, 1);
+            destinationX = listAddress.get(0).getLongitude();
+            destinationY = listAddress.get(0).getLatitude();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

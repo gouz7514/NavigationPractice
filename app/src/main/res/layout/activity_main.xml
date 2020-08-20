@@ -6,23 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    <android.support.v7.widget.CardView-->
-<!--        android:id="@+id/idCardView"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="5dp"-->
-<!--        app:cardCornerRadius="4dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/idCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-<!--        <fragment-->
-<!--            android:id="@+id/autocomplete_fragment"-->
-<!--            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
-<!--            android:layout_width="301dp"-->
-<!--            android:layout_height="wrap_content" />-->
-<!--    </android.support.v7.widget.CardView>-->
+        <fragment
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
 
 
 
@@ -38,7 +38,16 @@
         app:layout_constraintVertical_bias="1.0"
         mapbox:mapbox_cameraTargetLat="37.321643"
         mapbox:mapbox_cameraTargetLng="127.126756"
-        mapbox:mapbox_cameraZoom="16"></com.mapbox.mapboxsdk.maps.MapView>
+        mapbox:mapbox_cameraZoom="16">
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+<!--    <fragment-->
+<!--        android:id="@+id/autocomplete_fragment"-->
+<!--        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"-->
+<!--        android:layout_width="301dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtDestination" />-->
 
     <Button
         android:id="@+id/btnStartNavigation"
@@ -59,11 +68,12 @@
         android:id="@+id/btnSearch"
         android:layout_width="78dp"
         android:layout_height="55dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:background="@drawable/button_background"
         android:gravity="right"
-        android:onClick="map_search"
+
         android:paddingTop="20dp"
         android:text="@string/btnSearch"
         android:textAlignment="center"
