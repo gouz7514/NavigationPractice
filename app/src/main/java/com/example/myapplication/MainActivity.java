@@ -3,6 +3,8 @@ package com.example.myapplication;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.PointF;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -13,6 +15,9 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.Vector;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,6 +33,7 @@ import com.google.android.libraries.places.api.model.Place;
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
+import com.google.gson.JsonElement;
 import com.mapbox.android.core.location.LocationEngine;
 import com.mapbox.android.core.location.LocationEngineCallback;
 import com.mapbox.android.core.location.LocationEngineProvider;
@@ -35,6 +41,7 @@ import com.mapbox.android.core.location.LocationEngineRequest;
 import com.mapbox.android.core.location.LocationEngineResult;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 import com.mapbox.api.directions.v5.MapboxDirections;
+import com.mapbox.geojson.FeatureCollection;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.Marker;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
@@ -56,12 +63,17 @@ import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.style.expressions.Expression;
+import com.mapbox.mapboxsdk.style.layers.CircleLayer;
+import com.mapbox.mapboxsdk.style.layers.Layer;
+import com.mapbox.mapboxsdk.style.layers.PropertyFactory;
 import com.mapbox.mapboxsdk.style.layers.RasterLayer;
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconAllowOverlap;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconIgnorePlacement;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconImage;
+import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.fillColor;
+import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.symbolSortKey;
 
 // classes to calculate a route
 import com.mapbox.services.android.navigation.ui.v5.NavigationLauncherOptions;
@@ -83,7 +95,6 @@ import com.mapbox.services.android.navigation.ui.v5.NavigationLauncher;
 import com.mapbox.mapboxsdk.style.sources.TileSet;
 import com.mapbox.mapboxsdk.style.sources.RasterSource;
 import com.mapbox.mapboxsdk.style.sources.VectorSource;
-
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback, MapboxMap.OnMapClickListener, PermissionsListener {
     // variables for adding location layer
@@ -215,13 +226,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 originPosition = Point.fromLngLat(Lo, La);//현재 좌표
                 searchedPosition = Point.fromLngLat(destinationX, destinationY);
 //                getRoute(originPosition, searchedPosition);
-                // TODO : 0821
                 getRoute_walking(originPosition, searchedPosition);
                 getRoute_navi_walking(originPosition, searchedPosition);
                 // (Lo+destinationX)/2, (La+destinationY)/2
                 startButton.setEnabled(true);
                 startButton.setBackgroundResource(R.color.mapboxBlue);
-                Log.i(TAG, "중간 지점 위도 : " + (Lo+destinationX)/2 + " 중간 지점 경도 : " + (La+destinationY)/2);
                 CameraPosition position = new CameraPosition.Builder()
                         .target(new LatLng(destinationY, destinationX)) // Sets the new camera position
                         .zoom(16) // Sets the zoom , 줌 정도 숫자가 클수록 더많이 줌함
@@ -263,8 +272,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     /** TODO : 지도 수정 필요함 0824
      * tileset 연동한 DKUmap style 해보자
-     * 지도 연동은 잘 되네
-     * tilset은 올라가는데 style을 어떻게 올리지
+     * style 올리는거는 해결함
     **/
     public void onMapReady(@NonNull final MapboxMap mapboxMap) {
 //        Log.e(Tag, "onMapReady");
@@ -276,7 +284,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onStyleLoaded(@NonNull Style style) {
                 enableLocationComponent(style);
-                style.addLayer(new RasterLayer("DKUmap", "mapbox://styles/gouz7514/cke8d56tw4y5v19jv8ecm5l7v"));
+                style.addLayer(new RasterLayer("DKUmap", "mapbox://styles/gouz7514/cke8d56tw4y5v19jv8ecm5l7v")); // 지도에 style 지정해줌
+                RasterSource rasterSource = new RasterSource("DKUmap_0615", "gouz7514.ckat8quxf0kzm29pieefh9ok8-3fo3r");
+                Log.d(TAG, "테스트 : " + rasterSource.getAttribution());
             }
         });
 
@@ -293,7 +303,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         loadedMapStyle.addImage("destination-icon-id",
                 BitmapFactory.decodeResource(this.getResources(), R.drawable.mapbox_marker_icon_default));
         // TODO : 지도상 클릭시 "경로가 화면상에 표시되면 버튼 누르세요" 메시지 추가해보기
-        Toast.makeText(this, R.string.route_finding, Toast.LENGTH_LONG).show();
+
         GeoJsonSource geoJsonSource = new GeoJsonSource("destination-source-id");
         loadedMapStyle.addSource(geoJsonSource);
         SymbolLayer destinationSymbolLayer = new SymbolLayer("destination-symbol-layer-id", "destination-source-id");
@@ -303,16 +313,23 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 iconIgnorePlacement(true)
         );
         loadedMapStyle.addLayer(destinationSymbolLayer);
+
+
     }
 
     @Override
     //지도 클릭시 자동 길찾기
     public boolean onMapClick(@NonNull LatLng point) {
+
+
         if (destinationMarker != null) {
             mapboxMap.removeMarker(destinationMarker);
         }
         destinationMarker = mapboxMap.addMarker(new MarkerOptions().position(point));//마커 추가
         destinatonPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());//클릭한곳의 좌표
+
+
+
         originPosition = Point.fromLngLat(Lo, La);//현재 좌표
 //        getRoute(originPosition, destinatonPosition);
         // TODO : 0821
@@ -396,8 +413,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 //예상 시간을초단위로 받아옴
                 double distances = (currentRoute.distance()/1000);
                 // TODO : geometry : Returns:an encoded polyline string
-                String geometry = currentRoute.geometry();
-                Log.e(TAG, "테스트 : " + geometry);
                 //목적지까지의 거리를 m로 받아옴
 
                 distances = Math.round(distances*100)/100.0;
