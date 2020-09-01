@@ -41,6 +41,8 @@ import com.mapbox.android.core.location.LocationEngineRequest;
 import com.mapbox.android.core.location.LocationEngineResult;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 import com.mapbox.api.directions.v5.MapboxDirections;
+import com.mapbox.api.matching.v5.MapboxMapMatching;
+import com.mapbox.api.matching.v5.models.MapMatchingResponse;
 import com.mapbox.geojson.FeatureCollection;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.Marker;
@@ -280,13 +282,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapboxMap.addOnMapClickListener(this); //맵 클릭 리스너 등록
         //↓ 초기 지도 스타일 지정
 
-        mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/gouz7514/cke8d56tw4y5v19jv8ecm5l7v"), new Style.OnStyleLoaded() {
+        mapboxMap.setStyle(new Style.Builder().fromUri("mapbox://styles/gouz7514/cke8d56tw4y5v19jv8ecm5l7v"), new Style.OnStyleLoaded() { // Mapbox Studio에서 편집한 내용은 여기서 다 저장됨
             @Override
             public void onStyleLoaded(@NonNull Style style) {
                 enableLocationComponent(style);
-                style.addLayer(new RasterLayer("DKUmap", "mapbox://styles/gouz7514/cke8d56tw4y5v19jv8ecm5l7v")); // 지도에 style 지정해줌
-                RasterSource rasterSource = new RasterSource("DKUmap_0615", "gouz7514.ckat8quxf0kzm29pieefh9ok8-3fo3r");
-                Log.d(TAG, "테스트 : " + rasterSource.getAttribution());
+
+//                style.addLayer(new RasterLayer("dkumap-0615-route", "DKUmap_0615"));
+//                RasterLayer rasterLayer = new RasterLayer("dkumap-0615-building", "DKUmap_0615");
+//                Log.e(TAG, "테스트 : " + rasterLayer.getSourceId());
             }
         });
 
@@ -433,6 +436,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void getRoute_navi_walking (Point origin, Point destinaton) {
+        // TODO : https://docs.mapbox.com/android/navigation/overview/map-matching/
         NavigationRoute.builder(this).accessToken(Mapbox.getAccessToken())
                 .profile(DirectionsCriteria.PROFILE_WALKING)//도보 길찾기
                 .origin(origin)//출발지
@@ -458,6 +462,29 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onFailure(Call<DirectionsResponse> call, Throwable t) {
                     }
                 });
+//        MapboxMapMatching.builder()
+//                .accessToken(Mapbox.getAccessToken())
+//                .coordinates()
+//                .steps(true)
+//                .voiceInstructions(true)
+//                .bannerInstructions(true)
+//                .profile(DirectionsCriteria.PROFILE_WALKING)
+//                .build()
+//                .enqueueCall(new Callback<MapMatchingResponse>() {
+//
+//                    @Override
+//                    public void onResponse(Call<MapMatchingResponse> call, Response<MapMatchingResponse> response) {
+//                        if (response.isSuccessful()) {
+//                            DirectionsRoute route = response.body().matchings().get(0).toDirectionRoute();
+//                            navigation.startNavigation(route);
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<MapMatchingResponse> call, Throwable throwable) {
+//
+//                    }
+//                });
     }
 
     @SuppressWarnings( {"MissingPermission"})

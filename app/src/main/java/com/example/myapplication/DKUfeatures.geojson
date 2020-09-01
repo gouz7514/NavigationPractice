@@ -1,0 +1,5868 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 314,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12691,
+            37.322175
+          ],
+          [
+            127.127009,
+            37.322252
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "0188f59807b2473c7e02c4664e902b84"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 157,
+        "type": "destination",
+        "name": "Parking Lots Entrance 1",
+        "location": "37.320522, 127.125257"
+      },
+      "geometry": {
+        "coordinates": [
+          127.125285,
+          37.320498
+        ],
+        "type": "Point"
+      },
+      "id": "02ce2e0cfb2a554db5a3d550c1cc3e54"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 382,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128167,
+            37.319075
+          ],
+          [
+            127.128626,
+            37.31945
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "03be739ed544b99c771da03c6d3101f3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 306,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125401,
+            37.322006
+          ],
+          [
+            127.12499,
+            37.321523
+          ],
+          [
+            127.12492,
+            37.321227
+          ],
+          [
+            127.124986,
+            37.320907
+          ],
+          [
+            127.125259,
+            37.320636
+          ],
+          [
+            127.125736,
+            37.320257
+          ],
+          [
+            127.126009,
+            37.32004
+          ],
+          [
+            127.126297,
+            37.319811
+          ],
+          [
+            127.126701,
+            37.319489
+          ],
+          [
+            127.127151,
+            37.319367
+          ],
+          [
+            127.127625,
+            37.319415
+          ],
+          [
+            127.128223,
+            37.319784
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "05abc7378b3a5970b78ff79189185629"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 392,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126827,
+            37.314842
+          ],
+          [
+            127.127148,
+            37.315052
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "05ee1e792de0cce874045eb43c4e3eaa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 309,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.123778,
+            37.321918
+          ],
+          [
+            127.123907,
+            37.321806
+          ],
+          [
+            127.123797,
+            37.321717
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "069a13f479df41319b35d52c1195f748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 311,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127236,
+            37.322597
+          ],
+          [
+            127.127513,
+            37.322384
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "069e106d2d92cdddcbdcb3d02c081ead"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 129,
+        "type": "destination",
+        "name": "Gymnasium Entrance 1",
+        "location": "37.319407, 127.132252"
+      },
+      "geometry": {
+        "coordinates": [
+          127.132132,
+          37.319362
+        ],
+        "type": "Point"
+      },
+      "id": "06a0d6e953322b352b31e060846dee77"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 121,
+        "type": "destination",
+        "name": "Business and Economics Hall Entrance 1",
+        "location": "37.322541, 127.129018"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129081,
+          37.32257
+        ],
+        "type": "Point"
+      },
+      "id": "070e2a03a2f1b867c525ac500a46382f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 175,
+        "type": "destination",
+        "name": "Dankook History Hall Entrance 3",
+        "location": "37.319697, 127.130153"
+      },
+      "geometry": {
+        "coordinates": [
+          127.130163,
+          37.31971
+        ],
+        "type": "Point"
+      },
+      "id": "07d1614fc47ea23db669c7213bd49453"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 339,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126651,
+            37.319525
+          ],
+          [
+            127.126941,
+            37.319697
+          ],
+          [
+            127.127193,
+            37.319893
+          ],
+          [
+            127.127633,
+            37.32025
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "082f24aa75f34abd2d423d8520b7594a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 152,
+        "type": "destination",
+        "name": "Seok Juseon Memorial Museum Entrance 1",
+        "location": "37.319247, 127.127652"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127555,
+          37.319257
+        ],
+        "type": "Point"
+      },
+      "id": "0a628d0501bda0bd0585766d8d077265"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "type": "building",
+        "name": "College of Engineering 1",
+        "location": "37.320937, 127.125890"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.125224,
+              37.320982
+            ],
+            [
+              127.125409,
+              37.321125
+            ],
+            [
+              127.125661,
+              37.320917
+            ],
+            [
+              127.125598,
+              37.320869
+            ],
+            [
+              127.125608,
+              37.32086
+            ],
+            [
+              127.126191,
+              37.321301
+            ],
+            [
+              127.126326,
+              37.321189
+            ],
+            [
+              127.125598,
+              37.320639
+            ],
+            [
+              127.125492,
+              37.320729
+            ],
+            [
+              127.12562,
+              37.320827
+            ],
+            [
+              127.125545,
+              37.32089
+            ],
+            [
+              127.125435,
+              37.320807
+            ],
+            [
+              127.125224,
+              37.320982
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0a79c28070f0b7c4f6247fbda0a6a2fa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 373,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.132138,
+            37.319362
+          ],
+          [
+            127.131534,
+            37.319348
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "0a9773c6be80f8f0abd80a64fca83ef2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 319,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125384,
+            37.32142
+          ],
+          [
+            127.125766,
+            37.321703
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "0c14bfee90d8b5bec74470d7faeccb3e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "type": "building",
+        "name": "Hyedang Hall",
+        "location": "37.320369, 127.128397"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.127711,
+              37.320378
+            ],
+            [
+              127.128234,
+              37.319968
+            ],
+            [
+              127.12894,
+              37.320541
+            ],
+            [
+              127.128414,
+              37.32095
+            ],
+            [
+              127.127711,
+              37.320378
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0ea941559156b01c2188a3cc8c1c734a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 141,
+        "type": "destination",
+        "name": "College of Engineering 2 Entrance 2",
+        "location": "37.320709, 127.126359"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12643,
+          37.320791
+        ],
+        "type": "Point"
+      },
+      "id": "0ecc50b50773558bea3f0b9d0f5a2c4a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 316,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126236,
+            37.321852
+          ],
+          [
+            127.126273,
+            37.321829
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "0f7f5bbe75a0fa53361cb92d7cb69dac"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 161,
+        "type": "destination",
+        "name": "Woongbi Hall - Women Entrance 1",
+        "location": "37.315665, 127.126872"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127,
+          37.31569
+        ],
+        "type": "Point"
+      },
+      "id": "144925dd2db5eb9c39acfe1ec8ce06f6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 354,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129644,
+            37.321084
+          ],
+          [
+            127.129695,
+            37.321046
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "1596ebbf712ae2985f92a5facf3f7c62"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 302,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125706,
+            37.323295
+          ],
+          [
+            127.125996,
+            37.323202
+          ],
+          [
+            127.126244,
+            37.323152
+          ],
+          [
+            127.126564,
+            37.323102
+          ],
+          [
+            127.126764,
+            37.323089
+          ],
+          [
+            127.126987,
+            37.323089
+          ],
+          [
+            127.127451,
+            37.323092
+          ],
+          [
+            127.127819,
+            37.323028
+          ],
+          [
+            127.128032,
+            37.322885
+          ],
+          [
+            127.128139,
+            37.322679
+          ],
+          [
+            127.128156,
+            37.322525
+          ],
+          [
+            127.128158,
+            37.322421
+          ],
+          [
+            127.12816,
+            37.322293
+          ],
+          [
+            127.128161,
+            37.322192
+          ],
+          [
+            127.128165,
+            37.322015
+          ],
+          [
+            127.128107,
+            37.321866
+          ],
+          [
+            127.127814,
+            37.321613
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "16cc819c3f98090c8d2ee9fbe1cd7449"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "type": "building",
+        "name": "Media Center",
+        "location": "37.322235, 127.127607"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.127495,
+              37.322076
+            ],
+            [
+              127.127351,
+              37.322188
+            ],
+            [
+              127.127766,
+              37.322526
+            ],
+            [
+              127.127911,
+              37.322416
+            ],
+            [
+              127.127495,
+              37.322076
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "16cdb27c47f2d80b5a797e1b787dc172"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 381,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129195,
+            37.319074
+          ],
+          [
+            127.129353,
+            37.319203
+          ],
+          [
+            127.1296,
+            37.319032
+          ],
+          [
+            127.129542,
+            37.318971
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "172f075555770ad186499cfb9711b347"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 144,
+        "type": "destination",
+        "name": "College of Engineering 2 Entrance 5",
+        "location": "37.320267, 127.126125"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126155,
+          37.320352
+        ],
+        "type": "Point"
+      },
+      "id": "1878feee50e8f715f1e1d6604df4d427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 110,
+        "type": "destination",
+        "name": "Hyedang Hall Entrance 2",
+        "location": "37.320197, 127.127951"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12794,
+          37.320151
+        ],
+        "type": "Point"
+      },
+      "id": "1b99c9d97b3f0a82e8ecfdc77dc50cf9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 390,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126996,
+            37.315748
+          ],
+          [
+            127.126993,
+            37.31572
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "1c093919244889549951a19217e482c7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 27,
+        "type": "building",
+        "name": "Tennis Court",
+        "location": "37.320644, 127.129758"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.12943,
+              37.320631
+            ],
+            [
+              127.129701,
+              37.320411
+            ],
+            [
+              127.130183,
+              37.320769
+            ],
+            [
+              127.129901,
+              37.320993
+            ],
+            [
+              127.12943,
+              37.320631
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "1c7ded24fec5af87633207e443b0af89"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 356,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128357,
+            37.32168
+          ],
+          [
+            127.128979,
+            37.321548
+          ],
+          [
+            127.1291,
+            37.321462
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "1dec0ce7b3b7e8ac99c49cb7ab1d111f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 132,
+        "type": "destination",
+        "name": "Music Hall Entrance 2",
+        "location": "37.318958, 127.129469"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129544,
+          37.318969
+        ],
+        "type": "Point"
+      },
+      "id": "1e0b4aa89a791d2fb518e02f3fa50a86"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 153,
+        "type": "destination",
+        "name": "Seok Juseon Memorial Museum Entrance 2",
+        "location": "37.319075, 127.128059"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128063,
+          37.319071
+        ],
+        "type": "Point"
+      },
+      "id": "1ea37e4525191d3bd8e2375f28e610d0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 331,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126612,
+            37.320655
+          ],
+          [
+            127.126178,
+            37.320332
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "2090fe8f600aa6897df16e116e3bb3a0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 106,
+        "type": "destination",
+        "name": "Toegye Memorial Central Library Entrance 2",
+        "location": "37.321048, 127.127252"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127378,
+          37.321044
+        ],
+        "type": "Point"
+      },
+      "id": "216c7780aef51177e3cfb70e58d97220"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 169,
+        "type": "destination",
+        "name": "Graduate Schools Entrance 2",
+        "location": "37.321068, 127.129629"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129648,
+          37.32108
+        ],
+        "type": "Point"
+      },
+      "id": "2195fc588328a49bd4e0b86ecb647976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 312,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127538,
+            37.322751
+          ],
+          [
+            127.127284,
+            37.322556
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "255257c86f2fb35460120c42feb0f455"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 149,
+        "type": "destination",
+        "name": "College of Engineering 3 Entrance 5",
+        "location": "37.319901, 127.126407"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12645,
+          37.319958
+        ],
+        "type": "Point"
+      },
+      "id": "26f04c240c05a71d0478158057f74499"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 364,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129056,
+            37.322039
+          ],
+          [
+            127.12906,
+            37.321955
+          ],
+          [
+            127.129139,
+            37.321994
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "28b790729f94e067e737dbb5a818801f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 355,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12804,
+            37.32143
+          ],
+          [
+            127.128363,
+            37.321678
+          ],
+          [
+            127.128508,
+            37.321998
+          ],
+          [
+            127.12852,
+            37.322318
+          ],
+          [
+            127.128528,
+            37.322568
+          ],
+          [
+            127.128535,
+            37.322763
+          ],
+          [
+            127.128541,
+            37.322899
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "2af95bf6b7583c422b8a1f54251b8221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 360,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128639,
+            37.321774
+          ],
+          [
+            127.128413,
+            37.321805
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "2f883d0a086b6dec228a00696861c79b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 139,
+        "type": "destination",
+        "name": "College of Engineering 1 Entrance 4",
+        "location": "37.320627, 127.125685"
+      },
+      "geometry": {
+        "coordinates": [
+          127.125712,
+          37.320715
+        ],
+        "type": "Point"
+      },
+      "id": "2f98c2770fc5357132ec56143976df73"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 369,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129441,
+            37.32058
+          ],
+          [
+            127.129281,
+            37.320445
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "30ae1f65dfdef8105079b1c314bebe85"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 136,
+        "type": "destination",
+        "name": "College of Engineering 1 Entrance 1",
+        "location": "37.321093, 127.125884"
+      },
+      "geometry": {
+        "coordinates": [
+          127.125952,
+          37.321172
+        ],
+        "type": "Point"
+      },
+      "id": "3275120aacbca4ade1445ed6b8236862"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 340,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127036,
+            37.320266
+          ],
+          [
+            127.127322,
+            37.320488
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "340510d409cb14a5e8849e8bd79d2fe7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 118,
+        "type": "destination",
+        "name": "Education Hall Entrance 2",
+        "location": ""
+      },
+      "geometry": {
+        "coordinates": [
+          127.129106,
+          37.322735
+        ],
+        "type": "Point"
+      },
+      "id": "34788a45c4b842de234cbb7c50f89fd5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 172,
+        "type": "destination",
+        "name": "International Hall Entrance 2",
+        "location": "37.319135, 127.127044"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126829,
+          37.319086
+        ],
+        "type": "Point"
+      },
+      "id": "34c6961c2505732fc06132875d6abfa1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 126,
+        "type": "destination",
+        "name": "Humanities Hall Entrance 3",
+        "location": "37.321849, 127.128959"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129055,
+          37.321867
+        ],
+        "type": "Point"
+      },
+      "id": "34e357159609d2de8fd673d912d09e93"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 377,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129865,
+            37.319692
+          ],
+          [
+            127.129744,
+            37.319767
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "362cd7379a6cfc146cced2ea4b49609b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 350,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128219,
+            37.319783
+          ],
+          [
+            127.12915,
+            37.320552
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "3786cb546f4c77ead0b5d84baf3df0da"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "type": "building",
+        "name": "Humanities Hall",
+        "location": "37.321719, 127.128986"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.129418,
+              37.322035
+            ],
+            [
+              127.129155,
+              37.322042
+            ],
+            [
+              127.129149,
+              37.321852
+            ],
+            [
+              127.128678,
+              37.321861
+            ],
+            [
+              127.128671,
+              37.321659
+            ],
+            [
+              127.129518,
+              37.321642
+            ],
+            [
+              127.129524,
+              37.321811
+            ],
+            [
+              127.129411,
+              37.321813
+            ],
+            [
+              127.129418,
+              37.322035
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "38aa76aff2d837cafc1385860aaa186d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 313,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127759,
+            37.32224
+          ],
+          [
+            127.127391,
+            37.321947
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "38ad8ffb3a2ccf5ee6216aaf7496bef6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 386,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128414,
+            37.318131
+          ],
+          [
+            127.128236,
+            37.318305
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "3940fb4b32ad364a4e594a374c917fa2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 340,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127943,
+            37.320156
+          ],
+          [
+            127.127844,
+            37.320076
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "3a42f6a31e7a776fe7a9209e89efe4d3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "type": "building",
+        "name": "Music Hall",
+        "location": "37.318832, 127.129359"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.129367,
+              37.319143
+            ],
+            [
+              127.12943,
+              37.319096
+            ],
+            [
+              127.129445,
+              37.319109
+            ],
+            [
+              127.129509,
+              37.319061
+            ],
+            [
+              127.129483,
+              37.319039
+            ],
+            [
+              127.129492,
+              37.319032
+            ],
+            [
+              127.129261,
+              37.31884
+            ],
+            [
+              127.129251,
+              37.318847
+            ],
+            [
+              127.129234,
+              37.318835
+            ],
+            [
+              127.12941,
+              37.318701
+            ],
+            [
+              127.129575,
+              37.318838
+            ],
+            [
+              127.129519,
+              37.31888
+            ],
+            [
+              127.12956,
+              37.318912
+            ],
+            [
+              127.129542,
+              37.318924
+            ],
+            [
+              127.129652,
+              37.319015
+            ],
+            [
+              127.12991,
+              37.318817
+            ],
+            [
+              127.129799,
+              37.318725
+            ],
+            [
+              127.129748,
+              37.318764
+            ],
+            [
+              127.129705,
+              37.318729
+            ],
+            [
+              127.129721,
+              37.318717
+            ],
+            [
+              127.129549,
+              37.318576
+            ],
+            [
+              127.129531,
+              37.318591
+            ],
+            [
+              127.129461,
+              37.318535
+            ],
+            [
+              127.129394,
+              37.318586
+            ],
+            [
+              127.129387,
+              37.318577
+            ],
+            [
+              127.129092,
+              37.318801
+            ],
+            [
+              127.12911,
+              37.318815
+            ],
+            [
+              127.129039,
+              37.31887
+            ],
+            [
+              127.129367,
+              37.319143
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3b53aa3dbcbabf816451800e70656e91"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 30,
+        "type": "building",
+        "name": "Performing Arts Hall",
+        "location": "37.315972, 127.127382"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.12725,
+              37.31606
+            ],
+            [
+              127.12725,
+              37.315781
+            ],
+            [
+              127.127459,
+              37.315771
+            ],
+            [
+              127.127461,
+              37.316062
+            ],
+            [
+              127.12725,
+              37.31606
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "3b7c2bbad35fa287483564a52facdb90"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 127,
+        "type": "destination",
+        "name": "ROTC entrance 1",
+        "location": "37.318925, 127.131300"
+      },
+      "geometry": {
+        "coordinates": [
+          127.131366,
+          37.318934
+        ],
+        "type": "Point"
+      },
+      "id": "3db6d0b29adbd5b590554e764b57022f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 301,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125706,
+            37.323293
+          ],
+          [
+            127.126219,
+            37.322883
+          ],
+          [
+            127.126969,
+            37.322286
+          ],
+          [
+            127.12727,
+            37.322046
+          ],
+          [
+            127.127816,
+            37.321611
+          ],
+          [
+            127.128043,
+            37.321431
+          ],
+          [
+            127.128457,
+            37.321101
+          ],
+          [
+            127.128683,
+            37.320921
+          ],
+          [
+            127.128828,
+            37.320805
+          ],
+          [
+            127.128977,
+            37.320687
+          ],
+          [
+            127.129149,
+            37.32055
+          ],
+          [
+            127.129928,
+            37.31993
+          ],
+          [
+            127.129638,
+            37.319677
+          ],
+          [
+            127.129296,
+            37.319422
+          ],
+          [
+            127.128959,
+            37.319172
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "3ede81ae5a703dde433f2358f2eb29de"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "type": "building",
+        "name": "Social Science Hall",
+        "location": "37.321296, 127.125436"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.125064,
+              37.32114
+            ],
+            [
+              127.125189,
+              37.321032
+            ],
+            [
+              127.125876,
+              37.32154
+            ],
+            [
+              127.12575,
+              37.321649
+            ],
+            [
+              127.125064,
+              37.32114
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "40b655416ee024e5f330bc60a21bf1e8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 376,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.130169,
+            37.319704
+          ],
+          [
+            127.129895,
+            37.319901
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "41cb28853e06f60c04b1889192076a67"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 122,
+        "type": "destination",
+        "name": "Business and Economics Hall Entrance 2",
+        "location": "37.322187, 127.128660"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128716,
+          37.322195
+        ],
+        "type": "Point"
+      },
+      "id": "422129af569b114081130f00553d05ca"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 104,
+        "type": "destination",
+        "name": "Beomjeong Hall Entrance 4",
+        "location": "37.322115, 127.126876"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126916,
+          37.322177
+        ],
+        "type": "Point"
+      },
+      "id": "4456ede79873b4b6fee8ce6200e12ecd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 21,
+        "type": "building",
+        "name": "Power Plant",
+        "location": "37.321564, 127.123810"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.123458,
+              37.321631
+            ],
+            [
+              127.123671,
+              37.321788
+            ],
+            [
+              127.124022,
+              37.32153
+            ],
+            [
+              127.123833,
+              37.321364
+            ],
+            [
+              127.123458,
+              37.321631
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4490efc25a7a0711419f4f3c4fdb1aaa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 167,
+        "type": "destination",
+        "name": "Graduate Schools Entrance 2",
+        "location": "37.321178, 127.128996"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129111,
+          37.321262
+        ],
+        "type": "Point"
+      },
+      "id": "44ffc359425e3c5252f9feee93160857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 372,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.131544,
+            37.320108
+          ],
+          [
+            127.131535,
+            37.318964
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "461cedf2d0448b0cba160c70d9b1431a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 123,
+        "type": "destination",
+        "name": "Business and Economics Hall Entrance 3",
+        "location": "37.322025, 127.128987"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129057,
+          37.322037
+        ],
+        "type": "Point"
+      },
+      "id": "46a0d9d62a446648e50e2555270aea0e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 150,
+        "type": "destination",
+        "name": "Open Ground Entrance 1",
+        "location": "37.319867, 127.127091"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12718,
+          37.319884
+        ],
+        "type": "Point"
+      },
+      "id": "46c2584394fd38aca4d6df760110a72a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 135,
+        "type": "destination",
+        "name": "Social Science Hall Entrance 1",
+        "location": "37.321220, 127.125530"
+      },
+      "geometry": {
+        "coordinates": [
+          127.125575,
+          37.321286
+        ],
+        "type": "Point"
+      },
+      "id": "482c6dac34f8c9023cc435fcc51b5abb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 328,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126296,
+            37.320897
+          ],
+          [
+            127.126103,
+            37.320532
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "49051becc3079ba3be0b891f45089bf3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 359,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128946,
+            37.321329
+          ],
+          [
+            127.129101,
+            37.321463
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "4bd4caad677e132596458e8c80a2fc9c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 151,
+        "type": "destination",
+        "name": "Open Ground Entrance 2",
+        "location": "37.319703, 127.126890"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126929,
+          37.31969
+        ],
+        "type": "Point"
+      },
+      "id": "4cc1ce8a11430c45d100c0c241c9729a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 145,
+        "type": "destination",
+        "name": "College of Engineering 3 Entrance 1",
+        "location": "37.320248, 127.126152"
+      },
+      "geometry": {
+        "coordinates": [
+          127.1262,
+          37.320316
+        ],
+        "type": "Point"
+      },
+      "id": "4cd42575f5b78753fe7a215928ff55ba"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 322,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125573,
+            37.321288
+          ],
+          [
+            127.125698,
+            37.321189
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "500b372cb16e81a7709925db120650ea"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 154,
+        "type": "destination",
+        "name": "Seok Juseon Memorial Museum Entrance 3",
+        "location": "37.319009, 127.128152"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128162,
+          37.318999
+        ],
+        "type": "Point"
+      },
+      "id": "50321d28f426a3d9f85801c8465c6271"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 321,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125954,
+            37.32117
+          ],
+          [
+            127.125822,
+            37.321285
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "51307c59449e53a47d8d6b3a9aee0d80"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 327,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12571,
+            37.320716
+          ],
+          [
+            127.125752,
+            37.320677
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "526729b47711447a1d5a19b773579460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 352,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.1291,
+            37.320588
+          ],
+          [
+            127.129696,
+            37.32105
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "5316dd6c67aa83be428bb7fc7c3f476a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 351,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129015,
+            37.320808
+          ],
+          [
+            127.128915,
+            37.320732
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "54942d8d9ecd2cef33c6d30050278028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 308,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.123904,
+            37.321809
+          ],
+          [
+            127.124975,
+            37.32144
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "560d2c0b4c6af2c57631d80be3bc93d9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "type": "building",
+        "name": "Gymnasium",
+        "location": "37.319381, 127.132628"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.132207,
+              37.319594
+            ],
+            [
+              127.132214,
+              37.319103
+            ],
+            [
+              127.132903,
+              37.319109
+            ],
+            [
+              127.132896,
+              37.3196
+            ],
+            [
+              127.132207,
+              37.319594
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "562921e8730962458d74e3812acd0f2d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 358,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12911,
+            37.32126
+          ],
+          [
+            127.129098,
+            37.321466
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "57c5620a8b83b535cefb74ffd0712970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 335,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12738,
+            37.321047
+          ],
+          [
+            127.127019,
+            37.320719
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "5a312a857ef28484d00ae0a5d7ddbeb9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 384,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12816,
+            37.318997
+          ],
+          [
+            127.128169,
+            37.319079
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "5b995e484f349f72de297e97b1b99c3f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 379,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129563,
+            37.31937
+          ],
+          [
+            127.129396,
+            37.319498
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "5c022cb317dd328dfc22674d8cbb99c7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 174,
+        "type": "destination",
+        "name": "Jinligwan Entrance 1",
+        "location": "37.314946, 127.126848"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126832,
+          37.314845
+        ],
+        "type": "Point"
+      },
+      "id": "5c63b0a4023b4d519f371fa988236a23"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 26,
+        "type": "building",
+        "name": "Woongbi Hall - Women",
+        "location": "37.315472, 127.126858"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.126921,
+              37.315682
+            ],
+            [
+              127.127084,
+              37.315674
+            ],
+            [
+              127.127074,
+              37.315254
+            ],
+            [
+              127.126621,
+              37.31526
+            ],
+            [
+              127.126627,
+              37.315391
+            ],
+            [
+              127.126912,
+              37.315385
+            ],
+            [
+              127.126921,
+              37.315682
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "5db8d8dfc8e6b234715b684db25d527f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 137,
+        "type": "destination",
+        "name": "College of Engineering 1 Entrance 2",
+        "location": "37.320786, 127.125563"
+      },
+      "geometry": {
+        "coordinates": [
+          127.125653,
+          37.320902
+        ],
+        "type": "Point"
+      },
+      "id": "5df7e823a9f48385b49ff4e4ee5592a1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 315,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125906,
+            37.321589
+          ],
+          [
+            127.126694,
+            37.322214
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "5e3d1bf471265647a7d721f232a73026"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 370,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.130561,
+            37.320893
+          ],
+          [
+            127.129626,
+            37.320161
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "614ffd5e7449765f162f0e646ae9430e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 176,
+        "type": "destination",
+        "name": "Dankook History Hall Entrance 1",
+        "location": "37.319678, 127.129815"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129861,
+          37.319696
+        ],
+        "type": "Point"
+      },
+      "id": "63c1e8f0ec484210c33435a06b44a385"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 357,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129182,
+            37.321327
+          ],
+          [
+            127.129098,
+            37.321464
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "660602ba254976e3b64a794c04ac5678"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 345,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126825,
+            37.319085
+          ],
+          [
+            127.12695,
+            37.319074
+          ],
+          [
+            127.126979,
+            37.31899
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "66ca3000e7ce2cca18d55ec88da5377b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "type": "building",
+        "name": "Arts Hall",
+        "location": "37.319718, 127.131008"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.131143,
+              37.319604
+            ],
+            [
+              127.131152,
+              37.319485
+            ],
+            [
+              127.131222,
+              37.319482
+            ],
+            [
+              127.131223,
+              37.319429
+            ],
+            [
+              127.131347,
+              37.319424
+            ],
+            [
+              127.131347,
+              37.319606
+            ],
+            [
+              127.131382,
+              37.319605
+            ],
+            [
+              127.131384,
+              37.319653
+            ],
+            [
+              127.131434,
+              37.319653
+            ],
+            [
+              127.13143,
+              37.319803
+            ],
+            [
+              127.130802,
+              37.319817
+            ],
+            [
+              127.130741,
+              37.319858
+            ],
+            [
+              127.130673,
+              37.319861
+            ],
+            [
+              127.130637,
+              37.31984
+            ],
+            [
+              127.130583,
+              37.319809
+            ],
+            [
+              127.130581,
+              37.319765
+            ],
+            [
+              127.130601,
+              37.31974
+            ],
+            [
+              127.130629,
+              37.319715
+            ],
+            [
+              127.130649,
+              37.319705
+            ],
+            [
+              127.130665,
+              37.319691
+            ],
+            [
+              127.130664,
+              37.319658
+            ],
+            [
+              127.1306,
+              37.319633
+            ],
+            [
+              127.130595,
+              37.319544
+            ],
+            [
+              127.130546,
+              37.319525
+            ],
+            [
+              127.130568,
+              37.319339
+            ],
+            [
+              127.130682,
+              37.319337
+            ],
+            [
+              127.13069,
+              37.319392
+            ],
+            [
+              127.130831,
+              37.319385
+            ],
+            [
+              127.130838,
+              37.319566
+            ],
+            [
+              127.130777,
+              37.319565
+            ],
+            [
+              127.130782,
+              37.319612
+            ],
+            [
+              127.131143,
+              37.319604
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6733447f8ead007d421f417c06abdec3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "type": "building",
+        "name": "Main Stadium",
+        "location": "37.320874, 127.133068"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.132166,
+              37.320707
+            ],
+            [
+              127.132153,
+              37.320491
+            ],
+            [
+              127.132274,
+              37.320292
+            ],
+            [
+              127.132448,
+              37.320164
+            ],
+            [
+              127.132706,
+              37.32009
+            ],
+            [
+              127.132873,
+              37.320101
+            ],
+            [
+              127.133893,
+              37.320906
+            ],
+            [
+              127.133907,
+              37.321109
+            ],
+            [
+              127.133803,
+              37.321284
+            ],
+            [
+              127.133605,
+              37.321411
+            ],
+            [
+              127.133347,
+              37.321472
+            ],
+            [
+              127.133079,
+              37.32142
+            ],
+            [
+              127.132166,
+              37.320707
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "68722174ea95621884c401167c4353c3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 146,
+        "type": "destination",
+        "name": "College of Engineering 3 Entrance 2",
+        "location": "37.320348, 127.126809"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126855,
+          37.320426
+        ],
+        "type": "Point"
+      },
+      "id": "689b6634cb161b6a8a5ca570a46bf7ab"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 336,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127638,
+            37.321296
+          ],
+          [
+            127.127903,
+            37.321541
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "6a2926d3fbbb34784b264c07ef6b0716"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 317,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126573,
+            37.322118
+          ],
+          [
+            127.126608,
+            37.322095
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "6b7fcb825af380b9a090dc04d2fb7701"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "type": "building",
+        "name": "Education Hall",
+        "location": "37.322794, 127.128975"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.128655,
+              37.32291
+            ],
+            [
+              127.128651,
+              37.322753
+            ],
+            [
+              127.129162,
+              37.322743
+            ],
+            [
+              127.129159,
+              37.322587
+            ],
+            [
+              127.129393,
+              37.322583
+            ],
+            [
+              127.129398,
+              37.322769
+            ],
+            [
+              127.129481,
+              37.322768
+            ],
+            [
+              127.129486,
+              37.322893
+            ],
+            [
+              127.128655,
+              37.32291
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6c6264fdf0f29896ec25fa2e4cfaca24"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 35,
+        "type": "building",
+        "name": "Music Hall",
+        "location": "37.315980, 127.126867"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.129451,
+              37.3192
+            ],
+            [
+              127.12982,
+              37.318913
+            ],
+            [
+              127.130115,
+              37.319162
+            ],
+            [
+              127.12975,
+              37.319434
+            ],
+            [
+              127.129451,
+              37.3192
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6d12245e36df05bfbfce5f99b759efa3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 365,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12853,
+            37.322658
+          ],
+          [
+            127.128713,
+            37.322655
+          ],
+          [
+            127.12907,
+            37.322654
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "6f2dfb70524d1b1e6efc8c92f90ab099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 31,
+        "type": "building",
+        "name": "Graduate Schools",
+        "location": "37.321096, 127.129174"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.12858,
+              37.321217
+            ],
+            [
+              127.128733,
+              37.321308
+            ],
+            [
+              127.12869,
+              37.321353
+            ],
+            [
+              127.128744,
+              37.321385
+            ],
+            [
+              127.12879,
+              37.321345
+            ],
+            [
+              127.128833,
+              37.321388
+            ],
+            [
+              127.129062,
+              37.321186
+            ],
+            [
+              127.129236,
+              37.321322
+            ],
+            [
+              127.129217,
+              37.321333
+            ],
+            [
+              127.129385,
+              37.321455
+            ],
+            [
+              127.129702,
+              37.321169
+            ],
+            [
+              127.129157,
+              37.320725
+            ],
+            [
+              127.12858,
+              37.321217
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "6fb9206e770ab3ca27fab062a110115f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 170,
+        "type": "destination",
+        "name": "Graduate Schools Entrance 5",
+        "location": "37.320774, 127.129262"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129274,
+          37.320773
+        ],
+        "type": "Point"
+      },
+      "id": "713b5e027688927fb399d043cefad0ef"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 127,
+        "type": "destination",
+        "name": "Humanities Hall Entrance 4",
+        "location": "37.321744, 127.128557"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128634,
+          37.321775
+        ],
+        "type": "Point"
+      },
+      "id": "71f627a6635a877295f858689e01b30d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 363,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129136,
+            37.32192
+          ],
+          [
+            127.12906,
+            37.321956
+          ],
+          [
+            127.129053,
+            37.321864
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "72c7228c8907ab75ffa4a085b041abbb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 33,
+        "type": "building",
+        "name": "Jinligwan",
+        "location": "37.314741, 127.126648"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.126592,
+              37.315098
+            ],
+            [
+              127.126789,
+              37.315089
+            ],
+            [
+              127.126773,
+              37.314725
+            ],
+            [
+              127.127354,
+              37.314707
+            ],
+            [
+              127.12735,
+              37.314569
+            ],
+            [
+              127.126568,
+              37.314595
+            ],
+            [
+              127.126592,
+              37.315098
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "740f770f359fcb9020e572e6d9b863cb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 338,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12738,
+            37.320437
+          ],
+          [
+            127.128326,
+            37.321208
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "7707e6cc706f94a1687d6ea65844192c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 362,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128715,
+            37.322199
+          ],
+          [
+            127.128714,
+            37.322019
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "770ef9ef4e8b395fb86573dd9a87aadb"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 361,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128508,
+            37.32202
+          ],
+          [
+            127.128715,
+            37.322021
+          ],
+          [
+            127.12906,
+            37.321955
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "7762f93b8e79f04c15cb3e384f4df91e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 134,
+        "type": "destination",
+        "name": "Social Science Hall Entrance 1",
+        "location": "37.321369, 127.125369"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12539,
+          37.321424
+        ],
+        "type": "Point"
+      },
+      "id": "796719e5aea8d76d2792fd28c3c632fd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "type": "building",
+        "name": "Business and Economics Hall",
+        "location": "37.322257, 127.128975"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.129393,
+              37.322583
+            ],
+            [
+              127.129094,
+              37.322587
+            ],
+            [
+              127.129091,
+              37.322423
+            ],
+            [
+              127.128674,
+              37.322431
+            ],
+            [
+              127.128667,
+              37.322208
+            ],
+            [
+              127.12905,
+              37.322201
+            ],
+            [
+              127.129045,
+              37.322046
+            ],
+            [
+              127.129419,
+              37.322035
+            ],
+            [
+              127.12942,
+              37.322056
+            ],
+            [
+              127.129517,
+              37.322055
+            ],
+            [
+              127.129521,
+              37.322212
+            ],
+            [
+              127.129394,
+              37.322213
+            ],
+            [
+              127.129399,
+              37.322388
+            ],
+            [
+              127.129494,
+              37.322385
+            ],
+            [
+              127.129499,
+              37.322537
+            ],
+            [
+              127.129394,
+              37.322539
+            ],
+            [
+              127.129393,
+              37.322583
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "7beab7dfcd423dbd7e14bbe2a3f10d4e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 385,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128961,
+            37.319175
+          ],
+          [
+            127.128842,
+            37.319011
+          ],
+          [
+            127.128755,
+            37.31878
+          ],
+          [
+            127.128657,
+            37.318628
+          ],
+          [
+            127.128146,
+            37.318236
+          ],
+          [
+            127.127953,
+            37.318134
+          ],
+          [
+            127.127203,
+            37.318017
+          ],
+          [
+            127.12702,
+            37.31794
+          ],
+          [
+            127.126918,
+            37.317807
+          ],
+          [
+            127.126881,
+            37.31767
+          ],
+          [
+            127.12711,
+            37.316942
+          ],
+          [
+            127.127114,
+            37.316777
+          ],
+          [
+            127.127072,
+            37.316488
+          ],
+          [
+            127.127079,
+            37.316368
+          ],
+          [
+            127.127135,
+            37.316291
+          ],
+          [
+            127.12715,
+            37.316113
+          ],
+          [
+            127.127149,
+            37.315504
+          ],
+          [
+            127.127148,
+            37.315049
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "7d60ae66c6ccc367d738ccd088ce0931"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 124,
+        "type": "destination",
+        "name": "Humanities Hall Entrance 1",
+        "location": "37.321979, 127.129017"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129137,
+          37.321993
+        ],
+        "type": "Point"
+      },
+      "id": "7e3017060a33a964acc73dade815eb33"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 330,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126607,
+            37.320657
+          ],
+          [
+            127.126733,
+            37.320536
+          ],
+          [
+            127.126857,
+            37.320424
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "7f00e09a53b0382e44b1ee1c6607cb6a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 115,
+        "type": "destination",
+        "name": "Media Center Entrance 1",
+        "location": "37.322356, 127.127565"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127549,
+          37.322409
+        ],
+        "type": "Point"
+      },
+      "id": "802acc5a5ae789b2af064a2d7114af99"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 178,
+        "type": "destination",
+        "name": "Music Hall Entarnce 3",
+        "location": "37.319382, 127.129537"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129558,
+          37.319375
+        ],
+        "type": "Point"
+      },
+      "id": "80eac32375dcfab1d67fe7852fa9ffe9"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 125,
+        "type": "destination",
+        "name": "Humanities Hall Entrance 2",
+        "location": "37.321917, 127.129019"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129133,
+          37.321921
+        ],
+        "type": "Point"
+      },
+      "id": "8184ac902b933a3a27f40850185d0ebc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 374,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.131359,
+            37.318933
+          ],
+          [
+            127.131537,
+            37.318965
+          ],
+          [
+            127.131543,
+            37.318931
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "8186ee8ce7f5616d158aa74e629f8c69"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 323,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125699,
+            37.32119
+          ],
+          [
+            127.12567,
+            37.320914
+          ],
+          [
+            127.125651,
+            37.3209
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "81e57962be7c9655812977f1ae482ad8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 109,
+        "type": "destination",
+        "name": "Hyedang Hall Entrance 1",
+        "location": "37.320679, 127.128026"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128016,
+          37.32071
+        ],
+        "type": "Point"
+      },
+      "id": "82097a44675625920fbb8a701813428f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 125,
+        "type": "destination",
+        "name": "Waterfall Park Entrance 1",
+        "location": "37.320921, 127.130617"
+      },
+      "geometry": {
+        "coordinates": [
+          127.130548,
+          37.320882
+        ],
+        "type": "Point"
+      },
+      "id": "83d449be2eab5f59e5156ce4a7268ec1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 147,
+        "type": "destination",
+        "name": "College of Engineering 3 Entrance 3",
+        "location": "37.320066, 127.126451"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12653,
+          37.320157
+        ],
+        "type": "Point"
+      },
+      "id": "86089bacdad7b72bc0a825fe531879cc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 166,
+        "type": "destination",
+        "name": "Graduate Schools Entrance 3",
+        "location": "37.321231, 127.129076"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12918,
+          37.321331
+        ],
+        "type": "Point"
+      },
+      "id": "870cd628bfa28276db24c1c302a7bcf6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 310,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127551,
+            37.322413
+          ],
+          [
+            127.127187,
+            37.322112
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "881375f68854e45820058e99d602f9d5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 367,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129137,
+            37.322623
+          ],
+          [
+            127.12907,
+            37.322654
+          ],
+          [
+            127.129081,
+            37.322568
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "891b15836f31bc5f2d43090938f9f3df"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 173,
+        "type": "destination",
+        "name": "International Hall Entrance 2",
+        "location": "37.319056, 127.127165"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126979,
+          37.318993
+        ],
+        "type": "Point"
+      },
+      "id": "8a38bd07c75918cba47c5182b437f780"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 333,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126532,
+            37.321099
+          ],
+          [
+            127.127469,
+            37.32189
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "8af8c63859c3f2fd09c7c9ea7484c090"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 159,
+        "type": "destination",
+        "name": "Jiphyeonjae Entrance 1",
+        "location": "37.316840, 127.126836"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12692,
+          37.316878
+        ],
+        "type": "Point"
+      },
+      "id": "8b4a79f6a57ff9025707d764080850fe"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 329,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126986,
+            37.320748
+          ],
+          [
+            127.126733,
+            37.320535
+          ],
+          [
+            127.12653,
+            37.320154
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "8c53a683dc85cc00693374e8908ffdd8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 344,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127151,
+            37.319369
+          ],
+          [
+            127.126946,
+            37.319072
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "8d655be85b8140d926662590ddabc8e0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 20,
+        "type": "building",
+        "name": "Yeonmin Memorial Hall",
+        "location": "37.318074, 127.128397"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.128241,
+              37.318075
+            ],
+            [
+              127.128458,
+              37.317943
+            ],
+            [
+              127.128624,
+              37.318114
+            ],
+            [
+              127.128527,
+              37.318102
+            ],
+            [
+              127.128465,
+              37.318138
+            ],
+            [
+              127.128426,
+              37.3181
+            ],
+            [
+              127.128392,
+              37.318119
+            ],
+            [
+              127.128355,
+              37.318081
+            ],
+            [
+              127.128241,
+              37.318075
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "8dd0036050b96a77cc0852d3b71b23bd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 120,
+        "type": "destination",
+        "name": "Business and Economics Hall Entrance 3",
+        "location": "37.322619, 127.129017"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129136,
+          37.322625
+        ],
+        "type": "Point"
+      },
+      "id": "8f109ad228f4c7f0982c805af37cd6aa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 366,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128709,
+            37.32274
+          ],
+          [
+            127.128709,
+            37.322654
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "91f0cde93ae0e364530989e7da36fa82"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 368,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129106,
+            37.322737
+          ],
+          [
+            127.12907,
+            37.322653
+          ],
+          [
+            127.129138,
+            37.322681
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "932d39fc2da67fbc254072a32dd069c7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 138,
+        "type": "destination",
+        "name": "College of Engineering 1 Entrance 3",
+        "location": "37.320931, 127.126067"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126133,
+          37.320996
+        ],
+        "type": "Point"
+      },
+      "id": "934c840e120e04ec88cc25434d1c712d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 102,
+        "type": "destination",
+        "name": "Beomjeong Hall Entrance 2",
+        "location": "37.322019, 127.126541"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126606,
+          37.322097
+        ],
+        "type": "Point"
+      },
+      "id": "937350f8d3bf2d4b7dab810c0e2eb911"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 108,
+        "type": "destination",
+        "name": "Toegye Memorial Central Library Entrance 4",
+        "location": "37.321069, 127.127539"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12764,
+          37.321079
+        ],
+        "type": "Point"
+      },
+      "id": "9412cac151b3a76037e07f615bf790c2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 112,
+        "type": "destination",
+        "name": "Hyedang Hall Entrance 4",
+        "location": "37.320261, 127.128544"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128642,
+          37.320234
+        ],
+        "type": "Point"
+      },
+      "id": "94c75c3bd52ae55d33be212ac48b1b2f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 101,
+        "type": "destination",
+        "name": "Toegye Memorial Central Library Entrance 1",
+        "location": "37.321836, 127.126321"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126271,
+          37.321832
+        ],
+        "type": "Point"
+      },
+      "id": "95c61471c350476511d8d15f0517a215"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 347,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128701,
+            37.320768
+          ],
+          [
+            127.128786,
+            37.320839
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "95f9961e72d440af2ff7bd1677379799"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 130,
+        "type": "destination",
+        "name": "Main Stadium Entrance 1",
+        "location": "37.321009, 127.131977"
+      },
+      "geometry": {
+        "coordinates": [
+          127.131907,
+          37.320975
+        ],
+        "type": "Point"
+      },
+      "id": "96156d46e6355ad5eb225a031e41ea0f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 325,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126432,
+            37.320789
+          ],
+          [
+            127.126295,
+            37.320897
+          ],
+          [
+            127.12613,
+            37.320998
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "972918f4e55c010c60975db9f2774a77"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 119,
+        "type": "destination",
+        "name": "Education Hall Entrance 3",
+        "location": "37.322674, 127.129022"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129136,
+          37.32268
+        ],
+        "type": "Point"
+      },
+      "id": "986d28f5fa57c51ae8d629426193932e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 171,
+        "type": "destination",
+        "name": "Graduate Schools Entrance 2",
+        "location": "37.320774, 127.129031"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129009,
+          37.320803
+        ],
+        "type": "Point"
+      },
+      "id": "9e85aeeecddfd8e770af5c6e884d3ace"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 353,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12927,
+            37.320777
+          ],
+          [
+            127.129304,
+            37.320744
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "a3a980c9d44e67f564b0a0b28164fc85"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 116,
+        "type": "destination",
+        "name": "Media Center Entrance 2",
+        "location": "37.322215, 127.127734"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127757,
+          37.322235
+        ],
+        "type": "Point"
+      },
+      "id": "a3ddbc997c39372b030f63c1c8ca4bc1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 105,
+        "type": "destination",
+        "name": "Toegye Memorial Central Library Entrance 1",
+        "location": "37.321319, 127.127220"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127382,
+          37.321265
+        ],
+        "type": "Point"
+      },
+      "id": "a6571b55d648b750a9047ad87e2d2b02"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 28,
+        "type": "building",
+        "name": "Welfare Building",
+        "location": "37.321894, 127.124878"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.124677,
+              37.321804
+            ],
+            [
+              127.124863,
+              37.321679
+            ],
+            [
+              127.125342,
+              37.322132
+            ],
+            [
+              127.125151,
+              37.322271
+            ],
+            [
+              127.124677,
+              37.321804
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "a77c3141381e5f0df6e67e074cc3ebfe"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 318,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126208,
+            37.321586
+          ],
+          [
+            127.126059,
+            37.321468
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "a89ac5dcaff926d6da219e2f3c37fc84"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 107,
+        "type": "destination",
+        "name": "Toegye Memorial Central Library Entrance 4",
+        "location": "37.321278, 127.127522"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12764,
+          37.321298
+        ],
+        "type": "Point"
+      },
+      "id": "a9995ae9d286eccd49051d0c5df1e879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 128,
+        "type": "destination",
+        "name": "ROTC entrance 2",
+        "location": "37.318936, 127.131549"
+      },
+      "geometry": {
+        "coordinates": [
+          127.131543,
+          37.318934
+        ],
+        "type": "Point"
+      },
+      "id": "aa3a5dbeb4b22ba8354b9b13b2d19df0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 342,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125279,
+            37.320496
+          ],
+          [
+            127.125359,
+            37.320556
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "aaa54cf1f2e62f268abee684b02a700b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 389,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126994,
+            37.31572
+          ],
+          [
+            127.12715,
+            37.315717
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "ab585d4e0d181d9b2342db350cc50e6b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 32,
+        "type": "building",
+        "name": "International Hall",
+        "location": "37.319051, 127.127032"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.12746,
+              37.319078
+            ],
+            [
+              127.127293,
+              37.319211
+            ],
+            [
+              127.126982,
+              37.318949
+            ],
+            [
+              127.12694,
+              37.318976
+            ],
+            [
+              127.126955,
+              37.318991
+            ],
+            [
+              127.126917,
+              37.319029
+            ],
+            [
+              127.126875,
+              37.319054
+            ],
+            [
+              127.126793,
+              37.319062
+            ],
+            [
+              127.126883,
+              37.319417
+            ],
+            [
+              127.126695,
+              37.319468
+            ],
+            [
+              127.126574,
+              37.319047
+            ],
+            [
+              127.126555,
+              37.31905
+            ],
+            [
+              127.12654,
+              37.318986
+            ],
+            [
+              127.126765,
+              37.318952
+            ],
+            [
+              127.12677,
+              37.318984
+            ],
+            [
+              127.126852,
+              37.31895
+            ],
+            [
+              127.126841,
+              37.318939
+            ],
+            [
+              127.127112,
+              37.318797
+            ],
+            [
+              127.12746,
+              37.319078
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "aecac1c06158679aee8d16266959d75e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 117,
+        "type": "destination",
+        "name": "Education Hall Entrance 1",
+        "location": "37.322731, 127.128686"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12871,
+          37.322738
+        ],
+        "type": "Point"
+      },
+      "id": "b2e9b7d96be537007d6cfd17139a2774"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 349,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128942,
+            37.319952
+          ],
+          [
+            127.128668,
+            37.320154
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "b38683a2fd6fd5f4104d21acda5f1dfc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 388,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127224,
+            37.31593
+          ],
+          [
+            127.127145,
+            37.315931
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "b3d4dac6c8208b510056f3204802c17e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 114,
+        "type": "destination",
+        "name": "Software ICT Hall Entrance 2",
+        "location": "37.322714, 127.127501"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127537,
+          37.322746
+        ],
+        "type": "Point"
+      },
+      "id": "b3ee5e5d847583d2c325ab27da220a98"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 162,
+        "type": "destination",
+        "name": "Tennis Court Entrance 1",
+        "location": "37.320561, 127.129458"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129439,
+          37.320575
+        ],
+        "type": "Point"
+      },
+      "id": "b95514d263cbcd258a78b3ea8928aaed"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 148,
+        "type": "destination",
+        "name": "College of Engineering 3 Entrance 4",
+        "location": "37.320214, 127.126960"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12704,
+          37.320269
+        ],
+        "type": "Point"
+      },
+      "id": "bc54cc86498ddb8dfc866fb230568bc3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 158,
+        "type": "destination",
+        "name": "Laboratories Entrance 1",
+        "location": "37.320021, 127.125826"
+      },
+      "geometry": {
+        "coordinates": [
+          127.125922,
+          37.319978
+        ],
+        "type": "Point"
+      },
+      "id": "be27033df1a44095144303129cadf205"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 113,
+        "type": "destination",
+        "name": "Social Science Hall Entrance 1",
+        "location": "37.322533, 127.127209"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127242,
+          37.322593
+        ],
+        "type": "Point"
+      },
+      "id": "bf2f48c4031b17310485991e972b2bef"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "type": "building",
+        "name": "Software ICT Hall",
+        "location": "37.322837, 127.127464"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.127275,
+              37.322254
+            ],
+            [
+              127.127371,
+              37.322322
+            ],
+            [
+              127.127111,
+              37.32255
+            ],
+            [
+              127.12749,
+              37.322827
+            ],
+            [
+              127.127875,
+              37.322495
+            ],
+            [
+              127.128029,
+              37.322608
+            ],
+            [
+              127.127589,
+              37.32299
+            ],
+            [
+              127.127533,
+              37.32295
+            ],
+            [
+              127.127452,
+              37.323016
+            ],
+            [
+              127.126878,
+              37.322597
+            ],
+            [
+              127.127275,
+              37.322254
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c38f12f5355c86b640246d4a963b94e6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 164,
+        "type": "destination",
+        "name": "Glocal Industry-University cooperation Hall Entrance 1",
+        "location": "37.321564, 127.123810"
+      },
+      "geometry": {
+        "coordinates": [
+          127.123784,
+          37.321912
+        ],
+        "type": "Point"
+      },
+      "id": "c4c34b94db8562794fc7a52daf29b982"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 143,
+        "type": "destination",
+        "name": "College of Engineering 2 Entrance 4",
+        "location": "37.320583, 127.126508"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126611,
+          37.320654
+        ],
+        "type": "Point"
+      },
+      "id": "c7abc84b26bff8c2158c4d8cac55441a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 177,
+        "type": "destination",
+        "name": "Dankook History Hall Entrance 2",
+        "location": "37.319417, 127.129818"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129869,
+          37.319455
+        ],
+        "type": "Point"
+      },
+      "id": "c7b95dec74fe96b44256c5853116509b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 168,
+        "type": "destination",
+        "name": "Graduate Schools Entrance 2",
+        "location": "37.321251, 127.128832"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128951,
+          37.321331
+        ],
+        "type": "Point"
+      },
+      "id": "c83511743c70bd997812e63c85576a8a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 378,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129875,
+            37.319449
+          ],
+          [
+            127.129601,
+            37.319654
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "cad60b0ebe2802611371cd2bf099d705"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 348,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128638,
+            37.320236
+          ],
+          [
+            127.128709,
+            37.320187
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "cb7005e41aa37112a4db72a1eb65cdb8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 126,
+        "type": "destination",
+        "name": "Arts Hall Entrance 1",
+        "location": "37.319650, 127.130568"
+      },
+      "geometry": {
+        "coordinates": [
+          127.130559,
+          37.319656
+        ],
+        "type": "Point"
+      },
+      "id": "cd75805e79e7b3e4cbc292b1c6afabaa"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "type": "building",
+        "name": "ROTC",
+        "location": "37.318793, 127.131411"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.131193,
+              37.318896
+            ],
+            [
+              127.131193,
+              37.318872
+            ],
+            [
+              127.131157,
+              37.318871
+            ],
+            [
+              127.131155,
+              37.318775
+            ],
+            [
+              127.131179,
+              37.318775
+            ],
+            [
+              127.131182,
+              37.318731
+            ],
+            [
+              127.131578,
+              37.318731
+            ],
+            [
+              127.131578,
+              37.31876
+            ],
+            [
+              127.131605,
+              37.318761
+            ],
+            [
+              127.131605,
+              37.31887
+            ],
+            [
+              127.131583,
+              37.318869
+            ],
+            [
+              127.131581,
+              37.318894
+            ],
+            [
+              127.131193,
+              37.318896
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ce46a335eb6382aadfa31c95876b1e6f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 142,
+        "type": "destination",
+        "name": "College of Engineering 2 Entrance 3",
+        "location": "37.320434, 127.126018"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126104,
+          37.320534
+        ],
+        "type": "Point"
+      },
+      "id": "d151f25de8bbc22789ded61cfc5ef0a1"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 304,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126218,
+            37.322884
+          ],
+          [
+            127.126573,
+            37.323006
+          ],
+          [
+            127.126988,
+            37.32309
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "d1f6fd0fdecd395010953da7805ad696"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 34,
+        "type": "building",
+        "name": "Dankook History Hall",
+        "location": "37.319495, 127.130026"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.129798,
+              37.319561
+            ],
+            [
+              127.130093,
+              37.319352
+            ],
+            [
+              127.130317,
+              37.319535
+            ],
+            [
+              127.130011,
+              37.319743
+            ],
+            [
+              127.129798,
+              37.319561
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d24c2bc88338ff45f83f00a3c954674a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "test"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.124226,
+              37.323289
+            ],
+            [
+              127.12436,
+              37.323077
+            ],
+            [
+              127.124891,
+              37.323268
+            ],
+            [
+              127.124731,
+              37.32348
+            ],
+            [
+              127.124226,
+              37.323289
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "d459f5807848bbf209d6c74f8a36d602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 320,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126062,
+            37.32147
+          ],
+          [
+            127.125698,
+            37.321188
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "d4769778caa2faace19eb624abf3e794"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 131,
+        "type": "destination",
+        "name": "Music Hall Entarnce 1",
+        "location": "37.319095, 127.129177"
+      },
+      "geometry": {
+        "coordinates": [
+          127.129196,
+          37.319074
+        ],
+        "type": "Point"
+      },
+      "id": "d4b25a9ad3a90d79c59ec1287ee236f3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 155,
+        "type": "destination",
+        "name": "Yeonmin Memorial Hall Entrance 1",
+        "location": "37.318148, 127.128385"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128413,
+          37.318129
+        ],
+        "type": "Point"
+      },
+      "id": "d53fd8ce4d1851a397bc5757faf0692b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 346,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127556,
+            37.319252
+          ],
+          [
+            127.127525,
+            37.319408
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "d82644dd846ba1b5b296a42ad23d34f8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 391,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126999,
+            37.315689
+          ],
+          [
+            127.126993,
+            37.31572
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "d9102c1c90721800513860bc1acec783"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "type": "building",
+        "name": "College of Engineering 2",
+        "location": "37.320591, 127.126334"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.125873,
+              37.320753
+            ],
+            [
+              127.126103,
+              37.320552
+            ],
+            [
+              127.126052,
+              37.320515
+            ],
+            [
+              127.126075,
+              37.320493
+            ],
+            [
+              127.126659,
+              37.320922
+            ],
+            [
+              127.126779,
+              37.320817
+            ],
+            [
+              127.126029,
+              37.320267
+            ],
+            [
+              127.125918,
+              37.320364
+            ],
+            [
+              127.126054,
+              37.320465
+            ],
+            [
+              127.126014,
+              37.320499
+            ],
+            [
+              127.125874,
+              37.320399
+            ],
+            [
+              127.125652,
+              37.320592
+            ],
+            [
+              127.125873,
+              37.320753
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "dae01b17f8cfcef79bf4ac7cf7b058b5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 24,
+        "type": "building",
+        "name": "Jiphyeonjae",
+        "location": "37.316748, 127.126760"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.126988,
+              37.317102
+            ],
+            [
+              127.126854,
+              37.317203
+            ],
+            [
+              127.126522,
+              37.316931
+            ],
+            [
+              127.126783,
+              37.316728
+            ],
+            [
+              127.126599,
+              37.316573
+            ],
+            [
+              127.126732,
+              37.316468
+            ],
+            [
+              127.127055,
+              37.31673
+            ],
+            [
+              127.12679,
+              37.316937
+            ],
+            [
+              127.126988,
+              37.317102
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "db146ec3f8a9901d4aa78e8932a556d2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "type": "building",
+        "name": "Toegye Memorial Central Library",
+        "location": "37.321194, 127.127387"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.127447,
+              37.320715
+            ],
+            [
+              127.127668,
+              37.320914
+            ],
+            [
+              127.12753,
+              37.32102
+            ],
+            [
+              127.127669,
+              37.321164
+            ],
+            [
+              127.127803,
+              37.321056
+            ],
+            [
+              127.128008,
+              37.321255
+            ],
+            [
+              127.12782,
+              37.321407
+            ],
+            [
+              127.127664,
+              37.321254
+            ],
+            [
+              127.127586,
+              37.321315
+            ],
+            [
+              127.127741,
+              37.321465
+            ],
+            [
+              127.127553,
+              37.321606
+            ],
+            [
+              127.12735,
+              37.321417
+            ],
+            [
+              127.127484,
+              37.321316
+            ],
+            [
+              127.127337,
+              37.32118
+            ],
+            [
+              127.127202,
+              37.321277
+            ],
+            [
+              127.126984,
+              37.321073
+            ],
+            [
+              127.12718,
+              37.320922
+            ],
+            [
+              127.127359,
+              37.321088
+            ],
+            [
+              127.127441,
+              37.321029
+            ],
+            [
+              127.127255,
+              37.32086
+            ],
+            [
+              127.127447,
+              37.320715
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "dc111342575bdd4e970c8c5ae998f794"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 375,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.130566,
+            37.319652
+          ],
+          [
+            127.130121,
+            37.320028
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "dc2534cd2ffcd65b6da7c115eca6e8bf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 305,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126218,
+            37.322884
+          ],
+          [
+            127.126099,
+            37.322784
+          ],
+          [
+            127.125861,
+            37.322588
+          ],
+          [
+            127.125848,
+            37.322572
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "df303fe760ff36362c4a540e1f617150"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 307,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125146,
+            37.321892
+          ],
+          [
+            127.125253,
+            37.321832
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "e0184423fddb91003931d6fb080911bf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 341,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126451,
+            37.319964
+          ],
+          [
+            127.126264,
+            37.319835
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "e1e40820de5c8a481901c238202a12a4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 103,
+        "type": "destination",
+        "name": "Beomjeong Hall Entrance 3",
+        "location": "37.321586, 127.126211"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126205,
+          37.321584
+        ],
+        "type": "Point"
+      },
+      "id": "e1f3e078fd7deb872eb90e0d41ffaea6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 140,
+        "type": "destination",
+        "name": "College of Engineering 2 Entrance 1",
+        "location": "37.320611, 127.125708"
+      },
+      "geometry": {
+        "coordinates": [
+          127.125752,
+          37.320679
+        ],
+        "type": "Point"
+      },
+      "id": "e28a576c3f46f8ae65043a95e8ef6be8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 334,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.127385,
+            37.321262
+          ],
+          [
+            127.127003,
+            37.321497
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "e2e2a74cc1a288e2d3dcf3a6a6d812e5"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "type": "building",
+        "name": "College of Engineering 3",
+        "location": "37.320184, 127.126732"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.126314,
+              37.320395
+            ],
+            [
+              127.126548,
+              37.320201
+            ],
+            [
+              127.126494,
+              37.320158
+            ],
+            [
+              127.126523,
+              37.320135
+            ],
+            [
+              127.12709,
+              37.320565
+            ],
+            [
+              127.127232,
+              37.320448
+            ],
+            [
+              127.126527,
+              37.319912
+            ],
+            [
+              127.126394,
+              37.320021
+            ],
+            [
+              127.126504,
+              37.320106
+            ],
+            [
+              127.126452,
+              37.320148
+            ],
+            [
+              127.126327,
+              37.320056
+            ],
+            [
+              127.126115,
+              37.320241
+            ],
+            [
+              127.126314,
+              37.320395
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e58caeb5bb829a0514b186f8e462560d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 303,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.125706,
+            37.323294
+          ],
+          [
+            127.125843,
+            37.323064
+          ],
+          [
+            127.125864,
+            37.32296
+          ],
+          [
+            127.125885,
+            37.322803
+          ],
+          [
+            127.125849,
+            37.322573
+          ],
+          [
+            127.125401,
+            37.322006
+          ],
+          [
+            127.125771,
+            37.321701
+          ],
+          [
+            127.125907,
+            37.321589
+          ],
+          [
+            127.12607,
+            37.321462
+          ],
+          [
+            127.126303,
+            37.32128
+          ],
+          [
+            127.126532,
+            37.321102
+          ],
+          [
+            127.126797,
+            37.320894
+          ],
+          [
+            127.126994,
+            37.320741
+          ],
+          [
+            127.127213,
+            37.32057
+          ],
+          [
+            127.127408,
+            37.320418
+          ],
+          [
+            127.127821,
+            37.320097
+          ],
+          [
+            127.128223,
+            37.319784
+          ],
+          [
+            127.128958,
+            37.319172
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "e644ee1b48313853a39bba6af46e05a3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 156,
+        "type": "destination",
+        "name": "Power Plant Entrance 1",
+        "location": "37.318148, 127.128385"
+      },
+      "geometry": {
+        "coordinates": [
+          127.123802,
+          37.321721
+        ],
+        "type": "Point"
+      },
+      "id": "e7fa34d30423044a869a4ec0115cbac0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 324,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126534,
+            37.3211
+          ],
+          [
+            127.126294,
+            37.320895
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "e8563c44d541f553031fcd580ff57faf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 19,
+        "type": "building",
+        "name": "Seok Juseon Memorial Museum",
+        "location": "37.319119, 127.128188"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.127496,
+              37.319135
+            ],
+            [
+              127.127814,
+              37.319384
+            ],
+            [
+              127.127886,
+              37.319332
+            ],
+            [
+              127.128042,
+              37.31945
+            ],
+            [
+              127.128238,
+              37.319313
+            ],
+            [
+              127.12809,
+              37.319187
+            ],
+            [
+              127.128138,
+              37.319148
+            ],
+            [
+              127.128042,
+              37.319071
+            ],
+            [
+              127.128166,
+              37.318981
+            ],
+            [
+              127.128311,
+              37.319093
+            ],
+            [
+              127.128366,
+              37.319049
+            ],
+            [
+              127.128449,
+              37.319115
+            ],
+            [
+              127.128632,
+              37.318994
+            ],
+            [
+              127.128484,
+              37.318868
+            ],
+            [
+              127.128539,
+              37.318827
+            ],
+            [
+              127.128363,
+              37.31869
+            ],
+            [
+              127.128149,
+              37.318852
+            ],
+            [
+              127.128073,
+              37.318808
+            ],
+            [
+              127.128004,
+              37.318868
+            ],
+            [
+              127.128055,
+              37.318909
+            ],
+            [
+              127.127955,
+              37.318986
+            ],
+            [
+              127.127827,
+              37.318893
+            ],
+            [
+              127.127496,
+              37.319135
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e8edad5c68cd91b7e74fbc74b0e3a39a"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 133,
+        "type": "destination",
+        "name": "Peace Square Entrance 1",
+        "location": "37.319909, 127.128965"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128935,
+          37.319959
+        ],
+        "type": "Point"
+      },
+      "id": "e8fb653ce7cc22861acd76c681fb9e93"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 343,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.12592,
+            37.319976
+          ],
+          [
+            127.125999,
+            37.320047
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "e9302bf4b808eddb82e5e2bfdda7b41e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 25,
+        "type": "building",
+        "name": "Woongbi Hall - Men",
+        "location": "37.315980, 127.126867"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.126857,
+              37.31624
+            ],
+            [
+              127.126735,
+              37.31614
+            ],
+            [
+              127.126919,
+              37.315999
+            ],
+            [
+              127.126923,
+              37.315758
+            ],
+            [
+              127.127083,
+              37.315758
+            ],
+            [
+              127.127078,
+              37.316068
+            ],
+            [
+              127.126857,
+              37.31624
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "e9b14e4506da92397a11a885f3c03e02"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 326,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126134,
+            37.320997
+          ],
+          [
+            127.125731,
+            37.320696
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "ec9cd10f73c8fe97830049aa13b16666"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 18,
+        "type": "building",
+        "name": "Open Ground",
+        "location": "37.319731, 127.127248"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.126718,
+              37.319797
+            ],
+            [
+              127.126865,
+              37.319678
+            ],
+            [
+              127.127191,
+              37.319921
+            ],
+            [
+              127.127048,
+              37.320047
+            ],
+            [
+              127.126718,
+              37.319797
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "ef67ae2bf73b8c6d5ee6e2eb1c106b16"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 165,
+        "type": "destination",
+        "name": "Performing Arts Hall Entrance 1",
+        "location": "37.315888, 127.127143"
+      },
+      "geometry": {
+        "coordinates": [
+          127.127214,
+          37.315931
+        ],
+        "type": "Point"
+      },
+      "id": "f0488ec3e018ed8f31e766d4647d41c7"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 387,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126909,
+            37.316874
+          ],
+          [
+            127.127114,
+            37.316943
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "f115fd7e4efcd3c61f9557edbd27db18"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 160,
+        "type": "destination",
+        "name": "Woongbi Hall - Men Entrance 1",
+        "location": "37.315706, 127.126867"
+      },
+      "geometry": {
+        "coordinates": [
+          127.126997,
+          37.315747
+        ],
+        "type": "Point"
+      },
+      "id": "f1c4ead25632da30def14ad57c004b2d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 371,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129927,
+            37.319928
+          ],
+          [
+            127.130151,
+            37.320044
+          ],
+          [
+            127.130405,
+            37.320108
+          ],
+          [
+            127.131545,
+            37.320106
+          ],
+          [
+            127.131528,
+            37.32053
+          ],
+          [
+            127.1316,
+            37.320682
+          ],
+          [
+            127.131746,
+            37.320863
+          ],
+          [
+            127.131913,
+            37.320979
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "f34abfeae2886c63bc2d7978f0f76cbe"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 111,
+        "type": "destination",
+        "name": "Hyedang Hall Entrance 3",
+        "location": "37.320741, 127.128595"
+      },
+      "geometry": {
+        "coordinates": [
+          127.128706,
+          37.320773
+        ],
+        "type": "Point"
+      },
+      "id": "f4842226f07b7a423085f0b7b51dbd9f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 337,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128019,
+            37.320706
+          ],
+          [
+            127.127874,
+            37.320839
+          ],
+          [
+            127.127637,
+            37.321081
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "f4ea1512750330eba56ba3c8dfba1f24"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 29,
+        "type": "building",
+        "name": "Glocal Industry-University cooperation Hall",
+        "location": "37.321965, 127.123532"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.12317,
+              37.32186
+            ],
+            [
+              127.123387,
+              37.321668
+            ],
+            [
+              127.123965,
+              37.322073
+            ],
+            [
+              127.123752,
+              37.322281
+            ],
+            [
+              127.12317,
+              37.32186
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f69b117fa5f7e62243bbf2bcff004602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "type": "building",
+        "name": "Beomjeong Hall",
+        "location": "37.321889, 127.126571"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.126461,
+              37.321686
+            ],
+            [
+              127.126671,
+              37.321525
+            ],
+            [
+              127.126519,
+              37.321397
+            ],
+            [
+              127.126167,
+              37.321666
+            ],
+            [
+              127.126824,
+              37.322211
+            ],
+            [
+              127.127175,
+              37.321944
+            ],
+            [
+              127.127014,
+              37.321809
+            ],
+            [
+              127.126802,
+              37.321969
+            ],
+            [
+              127.126461,
+              37.321686
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "f9b5786d754a6c54e8588d7e16714b78"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 380,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.129197,
+            37.319075
+          ],
+          [
+            127.129014,
+            37.319218
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "fad9ba09e9a507834108a5d1dd5cb0c3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 22,
+        "type": "building",
+        "name": "Parking Lots",
+        "location": "37.320278, 127.124992"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.125436,
+              37.320325
+            ],
+            [
+              127.124916,
+              37.319941
+            ],
+            [
+              127.124647,
+              37.320148
+            ],
+            [
+              127.124679,
+              37.320514
+            ],
+            [
+              127.124995,
+              37.320702
+            ],
+            [
+              127.125436,
+              37.320325
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "faecf4e5a891e31159c5b8ab63c70e63"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 163,
+        "type": "destination",
+        "name": "Welfare Building Entrance 1",
+        "location": "37.321802, 127.125018"
+      },
+      "geometry": {
+        "coordinates": [
+          127.125149,
+          37.321891
+        ],
+        "type": "Point"
+      },
+      "id": "fbd1b9c6b85e6d54ed9e0e6736def394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 23,
+        "type": "building",
+        "name": "Laboratories",
+        "location": "37.319893, 127.125541"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              127.125548,
+              37.320252
+            ],
+            [
+              127.125979,
+              37.319885
+            ],
+            [
+              127.125807,
+              37.319731
+            ],
+            [
+              127.125933,
+              37.319564
+            ],
+            [
+              127.125894,
+              37.319515
+            ],
+            [
+              127.125586,
+              37.319524
+            ],
+            [
+              127.125627,
+              37.31961
+            ],
+            [
+              127.125572,
+              37.319589
+            ],
+            [
+              127.125155,
+              37.31995
+            ],
+            [
+              127.125548,
+              37.320252
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "fee4d4a9dd29f8dd7ef59b8cac0de1da"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 332,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.126154,
+            37.320352
+          ],
+          [
+            127.126179,
+            37.320333
+          ],
+          [
+            127.1262,
+            37.320315
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "feeb37a25f02f4f06249150054fb8e3f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 383,
+        "type": "route"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            127.128058,
+            37.319071
+          ],
+          [
+            127.128168,
+            37.319077
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "fffd2509ea672f2fdc39700e70c261e9"
+    }
+  ],
+  "type": "FeatureCollection"
+}
