@@ -38,5 +38,5 @@ getRoute_walking, getRoute_navi_walking 함수를 통해 도보로 예상 시간
 **0826**   
 rastersource와 vectorsource의 차이점이 대체 뭐냐????
 
-**0928**
+**0928**   
 ARbutton 추가 및 프로젝트와 연동(아직 기능 구현 X)
