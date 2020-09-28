@@ -8,4 +8,5 @@
     <string name="btnMyLoc">내 위치</string>
     <string name="btnDKU">학교 지도</string>
     <string name="btnStartNavigation">길 안내 시작</string>
+    <string name="btnStartAR">AR 시작</string>
 </resources>

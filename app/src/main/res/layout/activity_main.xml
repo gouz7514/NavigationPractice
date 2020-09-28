@@ -40,6 +40,7 @@
         mapbox:mapbox_cameraTargetLng="127.126756"
         mapbox:mapbox_cameraZoom="16">
 
+
     </com.mapbox.mapboxsdk.maps.MapView>
 
 <!--    <fragment-->
@@ -51,7 +52,7 @@
 
     <Button
         android:id="@+id/btnStartNavigation"
-        android:layout_width="382dp"
+        android:layout_width="180dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -59,8 +60,25 @@
         android:enabled="false"
         android:text="@string/btnStartNavigation"
         android:textColor="@color/mapboxWhite"
+        android:onClick="onClickAR"
         app:layout_constraintBottom_toBottomOf="@+id/mapView"
-        app:layout_constraintVertical_bias="0.96"
+        app:layout_constraintVertical_bias="0.9"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnStartAR"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:background="@color/mapboxGrayLight"
+        android:enabled="false"
+        android:text="@string/btnStartAR"
+        android:textColor="@color/mapboxWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/mapView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toEndOf="@+id/btnStartNavigation"
+        app:layout_constraintVertical_bias="0.9"
         mapbox:layout_constraintStart_toStartOf="parent"
         mapbox:layout_constraintTop_toTopOf="parent" />
 
@@ -72,7 +90,7 @@
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:background="@drawable/button_background"
-        android:gravity="right"
+        android:gravity="center_horizontal"
 
         android:paddingTop="20dp"
         android:text="@string/btnSearch"

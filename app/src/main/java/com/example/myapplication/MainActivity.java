@@ -83,6 +83,7 @@ import com.mapbox.services.android.navigation.ui.v5.route.NavigationMapRoute;
 import com.mapbox.services.android.navigation.v5.navigation.NavigationRoute;
 import com.mapbox.api.directions.v5.models.DirectionsResponse;
 import com.mapbox.api.directions.v5.models.DirectionsRoute;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     // variables for calculating and drawing a route
     private DirectionsRoute currentRoute;
+
     private static final String TAG = "DirectionsActivity";
     private NavigationMapRoute navigationMapRoute;
 
@@ -130,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Point destinatonPosition;
     private Point searchedPosition;
     private MapboxDirections client;
-    private Button startButton, mylocButton, dkuButton;
+    private Button startButton, mylocButton, dkuButton, arButton;
 
 
     EditText editText;
@@ -168,13 +170,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View v) {
 //                boolean simulateRoute = true; // 시뮬레이션용
                 NavigationLauncherOptions options = NavigationLauncherOptions.builder()
-                        .directionsRoute(currentRoute) // Detailed information about an individual route such as the duration, distance and geometry.
+                        .directionsRoute(currentRoute) // Detailed information about an individual route such as the duration, distance and geometry
 //                                .shouldSimulateRoute(simulateRoute) // 이거 있으면 지 혼자 시뮬레이션 돌아감
                         .build();
                 // Call this method with Context from within an Activity
                 NavigationLauncher.startNavigation(MainActivity.this, options);
             }
         });
+
+        // TODO : 0928 AR 버튼
+        arButton = findViewById(R.id.btnStartAR);
 
         // 내 위치로 카메라 이동
         mylocButton = findViewById(R.id.btnMyLoc);
@@ -242,6 +247,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 //카메라 움직이기
                 mapboxMap.animateCamera(CameraUpdateFactory
                         .newCameraPosition(position), 7000);
+                arButton.setEnabled(true);
+                arButton.setBackgroundResource(R.color.mapboxBlue);
             }
         });
 
@@ -340,7 +347,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         getRoute_navi_walking(originPosition, destinatonPosition);
         startButton.setEnabled(true);   //네비게이션 버튼 활성화
         startButton.setBackgroundResource(R.color.mapboxBlue);
-//        arButton.setEnabled(true);      //AR 버튼 활성화
+        arButton.setEnabled(true);
+        arButton.setBackgroundResource(R.color.mapboxBlue);
         return false;
     }
 
@@ -530,7 +538,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 //        startButton.setBackgroundResource(R.color.mapboxBlue);
 //    }
 
-
+    public void onClickAR(View view) {
+        arButton.setEnabled(true);
+        Intent intent = new Intent(getApplicationContext(), UnityPlayerActivity.class);
+        startActivity(intent);
+    }
 
     //안드로이드 기기 위치 추적
     //현재 위치 얻어오는 콜백
