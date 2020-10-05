@@ -180,6 +180,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         // TODO : 0928 AR 버튼
         arButton = findViewById(R.id.btnStartAR);
+        arButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), UnityPlayerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // 내 위치로 카메라 이동
         mylocButton = findViewById(R.id.btnMyLoc);
@@ -229,7 +236,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getPointFromGeoCoder(editText.getText().toString());
+                getPointFromGeoCoder(String.valueOf(editText.getText())); // TODO : toString 대신에 String.valueOf 해봄
                 originPosition = Point.fromLngLat(Lo, La);//현재 좌표
                 searchedPosition = Point.fromLngLat(destinationX, destinationY);
 //                getRoute(originPosition, searchedPosition);
@@ -266,9 +273,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
             @Override
             public void onPlaceSelected(Place place) {
-                txtView.setText(place.getName()); // 0820 : edittext 부분에 목적지 설정됨
-//                Log.e(TAG, String.valueOf(place.getLatLng()));
-                Log.i(TAG, "Place: " + place.getName() + ", " + place.getId());
+                txtView.setText(String.valueOf(place.getName())); // 0820 : edittext 부분에 목적지 설정됨
+                Log.e(TAG, "타입 테스트 : " + String.valueOf(place.getName()).getClass()); // String 타입인데 왜 안 될까?
             }
 
             @Override
@@ -293,19 +299,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onStyleLoaded(@NonNull Style style) {
                 enableLocationComponent(style);
-
-//                style.addLayer(new RasterLayer("dkumap-0615-route", "DKUmap_0615"));
-//                RasterLayer rasterLayer = new RasterLayer("dkumap-0615-building", "DKUmap_0615");
-//                Log.e(TAG, "테스트 : " + rasterLayer.getSourceId());
             }
         });
-
-//        mapboxMap.setStyle(getString(R.string.navigation_guidance_day), new Style.OnStyleLoaded() {
-//            @Override
-//            public void onStyleLoaded(@NonNull Style style) {
-//                enableLocationComponent(style);
-//            }
-//        });
     }
 
     // 클릭시 마커 추가
@@ -539,7 +534,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 //    }
 
     public void onClickAR(View view) {
-        arButton.setEnabled(true);
         Intent intent = new Intent(getApplicationContext(), UnityPlayerActivity.class);
         startActivity(intent);
     }
@@ -595,6 +589,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     // 목적지 주소값을 통해 목적지 위도 경도를 얻어오는 구문
+    // TODO : 이거를 Unity로 넘겨서 길찾기 수행해야 할거같음
     public void getPointFromGeoCoder(String destinationxy) {
         Log.e(TAG,"지오코더 실행");
         Geocoder geocoder = new Geocoder(this);
