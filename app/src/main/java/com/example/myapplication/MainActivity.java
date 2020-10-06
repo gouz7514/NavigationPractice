@@ -333,8 +333,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         destinationMarker = mapboxMap.addMarker(new MarkerOptions().position(point));//마커 추가
         destinatonPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());//클릭한곳의 좌표
 
-
-
         originPosition = Point.fromLngLat(Lo, La);//현재 좌표
 //        getRoute(originPosition, destinatonPosition);
         // TODO : 0821

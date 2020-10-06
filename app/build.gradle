@@ -46,10 +46,13 @@ dependencies {
     // 장소 자동완성
     implementation 'com.google.android.libraries.places:places:2.3.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+
 }
 
 allprojects {
     repositories {
+        google()
+        jcenter()
         flatDir {
             dirs 'libs'
         }

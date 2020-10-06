@@ -1,10 +1,7 @@
 # NavigationPractice
 네비게이션 어플 연습
 
-**- TODOS -**    
-버튼 구성 필요   
-길찾기 함수 뭐쓸지? 그냥 getRoute_walking만 쓸지 자동차, 도보 선택지 띄울지   
-내 TileSet에서 속성 어떻게 가져올지 생각해보자.  
+**- TODOS -**     
 AR 기능 구현 필요  
 
 **- 일일 진행 -**  
@@ -42,4 +39,5 @@ rastersource와 vectorsource의 차이점이 대체 뭐냐????
 ARbutton 추가 및 프로젝트와 연동(아직 기능 구현 X)
 
 **1005**  
-Unity와 연동 재시도했으나 Unable to start activity ComponentInfo 오류 계속 발생
+Unity와 연동 재시도했으나 Unable to start activity ComponentInfo 오류 계속 발생  
+오류 해결 : strings.xml 파일에 <string name="game_view_content_description">Game view</string> 추가(미쳤다리)
