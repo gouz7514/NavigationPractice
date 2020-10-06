@@ -43,3 +43,6 @@ ARbutton 추가 및 프로젝트와 연동(아직 기능 구현 X)
 
 **1005**  
 Unity와 연동 재시도했으나 Unable to start activity ComponentInfo 오류 계속 발생
+
+***
+Unity코드 수정 필요
