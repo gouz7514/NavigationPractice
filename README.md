@@ -43,7 +43,7 @@ ARbutton 추가 및 프로젝트와 연동(아직 기능 구현 X)
 
 **1005**  
 Unity와 연동 재시도했으나 Unable to start activity ComponentInfo 오류 계속 발생  
-string.xml 파일에 <string name="game_view_content_description">Game view</string> 추가
+string.xml 파일에 `<string name="game_view_content_description">Game view</string>` 추가
 
 **1006**  
 AR 버튼은 작동 but, 카메라 X
