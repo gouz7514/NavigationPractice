@@ -13,7 +13,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
-            abiFilters 'armeabi-v7a', 'x86'
+            abiFilters 'armeabi-v7a'
         }
     }
 
@@ -46,6 +46,12 @@ dependencies {
     // 장소 자동완성
     implementation 'com.google.android.libraries.places:places:2.3.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    // ARcore
+    implementation(name: 'arcore_client', ext:'aar')
+    implementation(name: 'google_ar_required', ext:'aar')
+    implementation(name: 'unityandroidpermissions', ext:'aar')
+    implementation(name: 'unitygar', ext:'aar')
 
 }
 

@@ -22,9 +22,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UnityPlayerActivity">
-            <!-- 임시방편용 주석-->
+<!--        <activity android:name=".UnityPlayerActivity">-->
+<!--            &lt;!&ndash; 임시방편용 주석&ndash;&gt;-->
+<!--        </activity>-->
+        <activity android:label="@string/app_name" android:screenOrientation="fullSensor" android:launchMode="singleTask"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+            android:hardwareAccelerated="false" android:name=".UnityPlayerActivity">
+            <meta-data android:name=".UnityActivity" android:value="true" />
         </activity>
+        <meta-data android:name="unity.tango-enable" android:value="True" />
+        <meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="true" />
+        <meta-data android:name="unity.build-id" android:value="80d0456c-2a3c-43c8-9f3c-0d91cbf6de88" />
+        <meta-data android:name="unity.splash-mode" android:value="0" />
+        <meta-data android:name="unity.splash-enable" android:value="True" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

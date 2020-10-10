@@ -2,10 +2,7 @@
 네비게이션 어플 연습
 
 **- TODOS -**    
-버튼 구성 필요   
-길찾기 함수 뭐쓸지? 그냥 getRoute_walking만 쓸지 자동차, 도보 선택지 띄울지   
-내 TileSet에서 속성 어떻게 가져올지 생각해보자.  
-AR 기능 구현 필요  
+1010 : AR 버튼 작동함  이제 경로만 띄우면 됨 
 
 **- 일일 진행 -**  
 **0810**  
@@ -47,3 +44,9 @@ string.xml 파일에 `<string name="game_view_content_description">Game view</st
 
 **1006**  
 AR 버튼은 작동 but, 카메라 X
+
+**1010**  
+카메라 된다!  
+`build.gradle`에서 `ndk` 수정  
+`libs`폴더에 `arcore_client.aar`, `google_ar_required.aar`, `unityandroidpermission.aar`, `unitygar.aar` 옮김  
+이후 `implementation`, manifest 수정
