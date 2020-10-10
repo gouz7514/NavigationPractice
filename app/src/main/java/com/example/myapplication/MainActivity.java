@@ -3,8 +3,6 @@ package com.example.myapplication;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.PointF;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -12,16 +10,12 @@ import android.os.Bundle;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.Vector;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.speech.RecognizerIntent;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +27,6 @@ import com.google.android.libraries.places.api.model.Place;
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
-import com.google.gson.JsonElement;
 import com.mapbox.android.core.location.LocationEngine;
 import com.mapbox.android.core.location.LocationEngineCallback;
 import com.mapbox.android.core.location.LocationEngineProvider;
@@ -41,9 +34,6 @@ import com.mapbox.android.core.location.LocationEngineRequest;
 import com.mapbox.android.core.location.LocationEngineResult;
 import com.mapbox.api.directions.v5.DirectionsCriteria;
 import com.mapbox.api.directions.v5.MapboxDirections;
-import com.mapbox.api.matching.v5.MapboxMapMatching;
-import com.mapbox.api.matching.v5.models.MapMatchingResponse;
-import com.mapbox.geojson.FeatureCollection;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.Marker;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
@@ -61,21 +51,13 @@ import com.mapbox.mapboxsdk.location.LocationComponent;
 import com.mapbox.mapboxsdk.location.modes.CameraMode;
 
 // classes needed to add a marker
-import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.Point;
 import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.style.expressions.Expression;
-import com.mapbox.mapboxsdk.style.layers.CircleLayer;
-import com.mapbox.mapboxsdk.style.layers.Layer;
-import com.mapbox.mapboxsdk.style.layers.PropertyFactory;
-import com.mapbox.mapboxsdk.style.layers.RasterLayer;
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconAllowOverlap;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconIgnorePlacement;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconImage;
-import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.fillColor;
-import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.symbolSortKey;
 
 // classes to calculate a route
 import com.mapbox.services.android.navigation.ui.v5.NavigationLauncherOptions;
@@ -94,10 +76,6 @@ import android.view.View;
 import android.widget.Button;
 import com.mapbox.services.android.navigation.ui.v5.NavigationLauncher;
 
-// TODO : 학교 지도를 옮기기 위한 패키지
-import com.mapbox.mapboxsdk.style.sources.TileSet;
-import com.mapbox.mapboxsdk.style.sources.RasterSource;
-import com.mapbox.mapboxsdk.style.sources.VectorSource;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback, MapboxMap.OnMapClickListener, PermissionsListener {
     // variables for adding location layer
@@ -148,7 +126,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     public static double DKULo = 127.127432;
 
     // 자동 완성
-    //String TAG = "placeautocomplete";
     static TextView txtView;
 
     @Override
@@ -205,7 +182,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
                 // TODO : 내위치 버튼 클릭하면 위도, 경도 대신 실제 주소 띄워보기
                 Toast.makeText(getApplicationContext(), String.format("내 위치로 이동합니다."), Toast.LENGTH_LONG).show();
-//                Toast.makeText(getApplicationContext(), String.format("            내위치 \n위도 : " + La + "\n경도 : "+Lo), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -239,10 +215,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 getPointFromGeoCoder(String.valueOf(editText.getText())); // TODO : toString 대신에 String.valueOf 해봄
                 originPosition = Point.fromLngLat(Lo, La);//현재 좌표
                 searchedPosition = Point.fromLngLat(destinationX, destinationY);
-//                getRoute(originPosition, searchedPosition);
                 getRoute_walking(originPosition, searchedPosition);
                 getRoute_navi_walking(originPosition, searchedPosition);
-                // (Lo+destinationX)/2, (La+destinationY)/2
                 startButton.setEnabled(true);
                 startButton.setBackgroundResource(R.color.mapboxBlue);
                 CameraPosition position = new CameraPosition.Builder()
@@ -285,10 +259,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    /** TODO : 지도 수정 필요함 0824
-     * tileset 연동한 DKUmap style 해보자
-     * style 올리는거는 해결함
-    **/
     public void onMapReady(@NonNull final MapboxMap mapboxMap) {
 //        Log.e(Tag, "onMapReady");
         this.mapboxMap = mapboxMap;
@@ -319,13 +289,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         );
         loadedMapStyle.addLayer(destinationSymbolLayer);
 
-
     }
 
     @Override
     //지도 클릭시 자동 길찾기
     public boolean onMapClick(@NonNull LatLng point) {
-
 
         if (destinationMarker != null) {
             mapboxMap.removeMarker(destinationMarker);
@@ -463,29 +431,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onFailure(Call<DirectionsResponse> call, Throwable t) {
                     }
                 });
-//        MapboxMapMatching.builder()
-//                .accessToken(Mapbox.getAccessToken())
-//                .coordinates()
-//                .steps(true)
-//                .voiceInstructions(true)
-//                .bannerInstructions(true)
-//                .profile(DirectionsCriteria.PROFILE_WALKING)
-//                .build()
-//                .enqueueCall(new Callback<MapMatchingResponse>() {
-//
-//                    @Override
-//                    public void onResponse(Call<MapMatchingResponse> call, Response<MapMatchingResponse> response) {
-//                        if (response.isSuccessful()) {
-//                            DirectionsRoute route = response.body().matchings().get(0).toDirectionRoute();
-//                            navigation.startNavigation(route);
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<MapMatchingResponse> call, Throwable throwable) {
-//
-//                    }
-//                });
     }
 
     @SuppressWarnings( {"MissingPermission"})
@@ -516,24 +461,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .setMaxWaitTime(DEFAULT_MAX_WAIT_TIME).build();
         locationEngine.requestLocationUpdates(request, callback, getMainLooper());
         locationEngine.getLastLocation(callback);
-    }
-
-
-    // TODO : 검색 버튼 클릭시 해당 위치 지도에서 찾아서 마커 표시하도록 하기
-
-//    public void map_search(View view) {
-//        getPointFromGeoCoder(editText.getText().toString());
-//        originPosition = Point.fromLngLat(Lo, La);//현재 좌표
-//        searchedPosition = Point.fromLngLat(destinationX, destinationY);
-//        getRoute(originPosition, searchedPosition);
-//        // (Lo+destinationX)/2, (La+destinationY)/2
-//        startButton.setEnabled(true);
-//        startButton.setBackgroundResource(R.color.mapboxBlue);
-//    }
-
-    public void onClickAR(View view) {
-        Intent intent = new Intent(getApplicationContext(), UnityPlayerActivity.class);
-        startActivity(intent);
     }
 
     //안드로이드 기기 위치 추적
