@@ -69,6 +69,8 @@ import com.mapbox.api.directions.v5.models.DirectionsRoute;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import timber.log.Timber;
+
 import android.util.Log;
 
 // classes needed to launch navigation UI
@@ -115,8 +117,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     EditText editText;
 
-    double destinationX; // longitude
-    double destinationY; // latitude
+    double destinationLa; // latitude 목적지 위도
+    double destinationLo; // longitude 목적지 경도
     public static double La; //latitude
     public static double Lo; // longitude
 
@@ -212,15 +214,15 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getPointFromGeoCoder(String.valueOf(editText.getText())); // TODO : toString 대신에 String.valueOf 해봄
+                getPointFromGeoCoder(String.valueOf(editText.getText()));
                 originPosition = Point.fromLngLat(Lo, La);//현재 좌표
-                searchedPosition = Point.fromLngLat(destinationX, destinationY);
+                searchedPosition = Point.fromLngLat(destinationLo, destinationLa);
                 getRoute_walking(originPosition, searchedPosition);
                 getRoute_navi_walking(originPosition, searchedPosition);
                 startButton.setEnabled(true);
                 startButton.setBackgroundResource(R.color.mapboxBlue);
                 CameraPosition position = new CameraPosition.Builder()
-                        .target(new LatLng(destinationY, destinationX)) // Sets the new camera position
+                        .target(new LatLng(destinationLa, destinationLo)) // Sets the new camera position
                         .zoom(16) // Sets the zoom , 줌 정도 숫자가 클수록 더많이 줌함
                         .bearing(0) // Rotate the camera , 카메라 방향(북쪽이 0) 북쪽부터 시계방향으로 측정
                         .tilt(0) // Set the camera tilt , 각도
@@ -260,7 +262,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     public void onMapReady(@NonNull final MapboxMap mapboxMap) {
-//        Log.e(Tag, "onMapReady");
         this.mapboxMap = mapboxMap;
         mapboxMap.addOnMapClickListener(this); //맵 클릭 리스너 등록
         //↓ 초기 지도 스타일 지정
@@ -275,8 +276,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     // 클릭시 마커 추가
     private void addDestinationIconSymbolLayer(@NonNull Style loadedMapStyle) {
-        loadedMapStyle.addImage("destination-icon-id",
-                BitmapFactory.decodeResource(this.getResources(), R.drawable.mapbox_marker_icon_default));
+//        loadedMapStyle.addImage("destination-icon-id",
+//                BitmapFactory.decodeResource(this.getResources(), R.drawable.mapbox_marker_icon_default));
         // TODO : 지도상 클릭시 "경로가 화면상에 표시되면 버튼 누르세요" 메시지 추가해보기
 
         GeoJsonSource geoJsonSource = new GeoJsonSource("destination-source-id");
@@ -302,8 +303,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         destinatonPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());//클릭한곳의 좌표
 
         originPosition = Point.fromLngLat(Lo, La);//현재 좌표
-//        getRoute(originPosition, destinatonPosition);
-        // TODO : 0821
         getRoute_walking(originPosition, destinatonPosition);
         getRoute_navi_walking(originPosition, destinatonPosition);
         startButton.setEnabled(true);   //네비게이션 버튼 활성화
@@ -315,42 +314,42 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
     // 길찾기 함수 - 여기를 바꾸면 되겠구나
-    private void getRoute(Point origin, Point destination) {
-        NavigationRoute.builder(this)
-                .accessToken(Mapbox.getAccessToken())
-                .origin(origin) // 출발지 위도, 경도
-                .destination(destination) // 목적지 위도, 경도
-                .build()
-                .getRoute(new Callback<DirectionsResponse>() {
-                    @Override
-                    public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
-                        // You can get the generic HTTP info about the response
-                        Log.d(TAG, "Response code: " + response.code());
-                        if (response.body() == null) {
-                            Log.e(TAG, "No routes found, make sure you set the right user and access token.");
-                            return;
-                        } else if (response.body().routes().size() < 1) {
-                            Log.e(TAG, "No routes found");
-                            return;
-                        }
-
-                        currentRoute = response.body().routes().get(0);
-
-                        // Draw the route on the map
-                        if (navigationMapRoute != null) {
-                            navigationMapRoute.removeRoute();
-                        } else {
-                            navigationMapRoute = new NavigationMapRoute(null, mapView, mapboxMap, R.style.NavigationMapRoute);
-                        }
-                        navigationMapRoute.addRoute(currentRoute);
-                    }
-
-                    @Override
-                    public void onFailure(Call<DirectionsResponse> call, Throwable throwable) {
-                        Log.e(TAG, "Error: " + throwable.getMessage());
-                    }
-                });
-    }
+//    private void getRoute(Point origin, Point destination) {
+//        NavigationRoute.builder(this)
+//                .accessToken(Mapbox.getAccessToken())
+//                .origin(origin) // 출발지 위도, 경도
+//                .destination(destination) // 목적지 위도, 경도
+//                .build()
+//                .getRoute(new Callback<DirectionsResponse>() {
+//                    @Override
+//                    public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
+//                        // You can get the generic HTTP info about the response
+//                        Log.d(TAG, "Response code: " + response.code());
+//                        if (response.body() == null) {
+//                            Log.e(TAG, "No routes found, make sure you set the right user and access token.");
+//                            return;
+//                        } else if (response.body().routes().size() < 1) {
+//                            Log.e(TAG, "No routes found");
+//                            return;
+//                        }
+//
+//                        currentRoute = response.body().routes().get(0);
+//
+//                        // Draw the route on the map
+//                        if (navigationMapRoute != null) {
+//                            navigationMapRoute.removeRoute();
+//                        } else {
+//                            navigationMapRoute = new NavigationMapRoute(null, mapView, mapboxMap, R.style.NavigationMapRoute);
+//                        }
+//                        navigationMapRoute.addRoute(currentRoute);
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<DirectionsResponse> call, Throwable throwable) {
+//                        Log.e(TAG, "Error: " + throwable.getMessage());
+//                    }
+//                });
+//    }
 
     // TODO : 도보로 길찾기 함수
     private void getRoute_walking(Point origin, Point destination) {
@@ -479,7 +478,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         @Override
         public void onSuccess(LocationEngineResult result) {
-            Log.e(TAG,"onSuccess 실행");
+            Log.e(TAG,"MainActivityLocationCallback onSuccess 실행");
             MainActivity activity = activityWeakReference.get();
             if (activity != null) {
                 Location location = result.getLastLocation();
@@ -514,25 +513,25 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     // 목적지 주소값을 통해 목적지 위도 경도를 얻어오는 구문
-    // TODO : 이거를 Unity로 넘겨서 길찾기 수행해야 할거같음
     public void getPointFromGeoCoder(String destinationxy) {
         Log.e(TAG,"지오코더 실행");
         Geocoder geocoder = new Geocoder(this);
         List<Address> listAddress = null;
         try {
             listAddress = geocoder.getFromLocationName(destinationxy, 1);
-            destinationX = listAddress.get(0).getLongitude();
-            destinationY = listAddress.get(0).getLatitude();
+            destinationLo = listAddress.get(0).getLongitude();
+            destinationLa = listAddress.get(0).getLatitude();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-
     @Override //위치권한
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
+
+
 
     @Override //권한 필요할때 나오는 메세지
     public void onExplanationNeeded(List<String> permissionsToExplain) {
