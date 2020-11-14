@@ -473,8 +473,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
          * The LocationEngineCallback interface's method which fires when the device's location has changed.
          * @param result the LocationEngineResult object which has the last known location within it.
          */
-        // OnSuccess()가 장치 위치의 변경을 식별 할 때마다 실행
-        // result.getLastLocation()가 Location객체를주고 그 객체는 위도와 경도 값을 가지고 있습니다.
 
         @Override
         public void onSuccess(LocationEngineResult result) {
