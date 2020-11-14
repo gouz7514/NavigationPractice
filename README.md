@@ -196,11 +196,12 @@ private void getRoute_walking(Point origin, Point destination) {
 - 네이버 : 정확하지만 큰 도로 우선 안내 -> 샛길, 보행자 전용 도로 안내 X
 - 구글 : 국내 도보 경로 제공 X
 
-Mapbox를 사용하면 지도의 자유로운 styling, 자유로운 기능 구현 등이 가능하지만 Mapbox도 원하는 경로를 나타내지 못하는 문제점이 있었다.
-![경로 문제 발생](https://user-images.githubusercontent.com/41367134/99142797-d0cfd580-269b-11eb-83b3-323b453539d9.PNG)
+Mapbox를 사용하면 지도의 자유로운 styling, 자유로운 기능 구현 등이 가능하지만<br>
+Mapbox도 원하는 경로를 나타내지 못하는 문제점이 있었다.<br>
+![경로 문제 발생](https://user-images.githubusercontent.com/41367134/99142797-d0cfd580-269b-11eb-83b3-323b453539d9.PNG)<br>
 이를 해결하기 위해 Mapbox측에 메일을 보냈고 Mapbox는 오픈소스 지도 프로젝트인 [OpenStreetMap](www.openstreetmap.org)을 기반으로 지도를 생성한다는 답장을 받을 수 있었다.<br>
 결과적으로, 해당 사이트와 [JOSM](https://josm.openstreetmap.de/)을 이용해 원하는 지역에 원하는 경로를 추가해 지도를 생성할 수 있었다.<br>
-![내가 기여한 OpenStreetMap의 변경 내역](https://www.openstreetmap.org/changeset/91498317#map=18/37.32117/127.12767)
+[내가 기여한 OpenStreetMap의 변경 내역](https://www.openstreetmap.org/changeset/91498317#map=18/37.32117/127.12767)
 
 #### 4. 장소 자동완성
 학교나 내 주변 외에 목적지를 설정할 수 있도록 `Google Places API`를 사용해 장소 검색 기능을 구현함
@@ -226,10 +227,10 @@ Places.initialize(getApplicationContext(), "AIzaSyCVXwfS2pdm-KGbqvXc30RB8jGGJZ58
             }
         });
 ```
-![장소 자동완성](https://user-images.githubusercontent.com/41367134/99142634-391db780-269a-11eb-8f6b-e15edfdea6ae.jpg)
+![장소 자동완성](https://user-images.githubusercontent.com/41367134/99143283-9a945500-269f-11eb-8865-68f3e5114a0b.jpg)
 
 #### 5. AR 네비게이션
-실제 세계와 지도를 연동해 나타내기 위해 Mapbox의 [World-scale AR](https://docs.mapbox.com/unity/maps/examples/world-scale-ar/)을 사용하였다.<br>
+실제 세계와 지도를 연동해 나타내기 위해 Mapbox의 [World-scale AR](https://docs.mapbox.com/unity/maps/examples/world-scale-ar/)을 사용하였다.
 이 후 `Directions.prefab`을 사용해 Direction API의 결과를 바탕으로 출발지와 목적지 정보를 가져오며<br>
 결과적으로 출발지(초록색 마커) ~ 목적지(하얀색 마커) 까지 경로(빨간 경로)가 나타는 것을 확인할 수 있다.
 ![Unity 상에 나타나는 경로](https://user-images.githubusercontent.com/41367134/99142984-56a05080-269d-11eb-88e2-ea6e7527ca31.PNG)
