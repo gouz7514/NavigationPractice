@@ -8,7 +8,7 @@ Mapbox SDK를 활용한 네비게이션 어플리케이션(Navigation Applicatio
 
 ### 프로젝트 내용
 #### 개요
-단국대학교 응용컴퓨터공학과 4학년 종합설계 프로젝트[단국대 학생들을 위한 종합 어플리케이션 repository](https://github.com/TwinkleRing/Capstone-Project)의 일부로서, `Mapbox`를 활용해 지도 및 네비게이션을 나타내고
+단국대학교 응용컴퓨터공학과 4학년 종합설계 프로젝트([link](https://github.com/TwinkleRing/Capstone-Project))의 일부로서, `Mapbox`를 활용해 지도 및 네비게이션을 나타내고
 네비게이션 상의 경로를 AR로 표시함으로서 사용자의 원활한 길 찾기를 가능하게 함<br>
 
 #### 과정
