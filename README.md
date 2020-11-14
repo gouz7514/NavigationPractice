@@ -4,7 +4,7 @@ Mapbox SDK를 활용한 네비게이션 어플리케이션(Navigation Applicatio
 
 ## 프로젝트 소개
 2D 지도를 기반으로 한 네비게이션 및 AR을 통한 길 안내 어플리케이션<br>
-![어플 사용 예시](https://user-images.githubusercontent.com/41367134/99142579-ac72f980-2699-11eb-9776-02e34b006bd7.jpg)
+![어플 사용 예시](https://user-images.githubusercontent.com/41367134/99142609-fbb92a00-2699-11eb-8ca6-cec562a0bf4e.jpg)
 
 ## 프로젝트 내용
 ### 개요
