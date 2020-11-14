@@ -4,7 +4,7 @@ Mapbox SDK를 활용한 네비게이션 어플리케이션(Navigation Applicatio
 
 ## 프로젝트 소개
 2D 지도를 기반으로 한 네비게이션 및 AR을 통한 길 안내 어플리케이션<br>
-![어플 사용 예시](https://user-images.githubusercontent.com/41367134/99141899-14721180-2693-11eb-8f87-4106ab6fb723.jpg)
+![어플 사용 예시](https://user-images.githubusercontent.com/41367134/99142579-ac72f980-2699-11eb-9776-02e34b006bd7.jpg)
 
 ## 프로젝트 내용
 ### 개요
@@ -201,5 +201,28 @@ private void getRoute_walking(Point origin, Point destination) {
 
 
 #### 4. 장소 자동완성
+학교나 내 주변 외에 목적지를 설정할 수 있도록 `Google Places API`를 사용해 장소 검색 기능을 구현함
+```java
+Places.initialize(getApplicationContext(), "AIzaSyCVXwfS2pdm-KGbqvXc30RB8jGGJZ58mtc");
+        // Create a new Places client instance.
+        PlacesClient placesClient = Places.createClient(this);
+        // Initialize the AutocompleteSupportFragment.
+        AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
+                getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
+        // Specify the types of place data to return.
+        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME));
+        // Set up a PlaceSelectionListener to handle the response.
+        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(Place place) {
+                txtView.setText(String.valueOf(place.getName())); // edittext 부분에 목적지 설정됨
+            }
+
+            @Override
+            public void onError(@NonNull Status status) {
+                Log.i(TAG, "An error occurred: " + status);
+            }
+        });
+```
 
 #### 5. AR 네비게이션
