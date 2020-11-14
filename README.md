@@ -26,7 +26,7 @@ Mapbox SDK를 활용한 네비게이션 어플리케이션(Navigation Applicatio
 
 지도를 포함할 액티비티의 xml 파일에 `MapView`를 추가<br>
 `activity_main.xml`
-```
+```xml
 <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@ Mapbox SDK를 활용한 네비게이션 어플리케이션(Navigation Applicatio
 ```
 
 위치 업데이트를 위한 `LocationEngine` 개체의 사용
-```
+```java
 // LocationEngine 변수
 private LocationEngine locationEngine;
 ...
@@ -61,7 +61,7 @@ private LocationEngine locationEngine;
 ```
 
 현재 위치 얻어오는 콜백 실행
-```
+```java
 class MainActivityLocationCallback implements LocationEngineCallback<LocationEngineResult> {
         private final WeakReference<MainActivity> activityWeakReference;
         MainActivityLocationCallback(MainActivity activity) {
@@ -111,7 +111,7 @@ class MainActivityLocationCallback implements LocationEngineCallback<LocationEng
 
 ###### 2. 2D 네비게이션
 **2.1 지도 상 클릭시 목적지로 설정 후 경로 생성**
-```
+```java
 @Override
     public boolean onMapClick(@NonNull LatLng point) {
         if (destinationMarker != null) {
@@ -130,7 +130,7 @@ class MainActivityLocationCallback implements LocationEngineCallback<LocationEng
     }
 ```
 **2.2 길찾기 메소드**
-```
+```java
 private void getRoute_walking(Point origin, Point destination) {
         Log.e(TAG,"getRoute 실행");
         client = MapboxDirections.builder()
