@@ -22,7 +22,6 @@ Mapbox SDK를 활용한 네비게이션 어플리케이션(Navigation Applicatio
 ### 과정
 #### 1. 지도
 mapbox android SDK의 사용을 위해 해당 모듈을 `New Module`로 추가
-
 지도를 포함할 액티비티의 xml 파일에 `MapView`를 추가<br>
 **activity_main.xml**
 ```xml
@@ -228,7 +227,7 @@ Places.initialize(getApplicationContext(), "AIzaSyCVXwfS2pdm-KGbqvXc30RB8jGGJZ58
             }
         });
 ```
-![장소 자동완성](https://user-images.githubusercontent.com/41367134/99143283-9a945500-269f-11eb-8865-68f3e5114a0b.jpg)
+![장소 자동완성](https://user-images.githubusercontent.com/41367134/99143374-2d34f400-26a0-11eb-81be-239e47ae5448.jpg)
 
 #### 5. AR 네비게이션
 실제 세계와 지도를 연동해 나타내기 위해 Mapbox의 [World-scale AR](https://docs.mapbox.com/unity/maps/examples/world-scale-ar/)을 사용하였다.
