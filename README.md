@@ -198,6 +198,7 @@ private void getRoute_walking(Point origin, Point destination) {
 
 Mapbox를 사용하면 지도의 자유로운 styling, 자유로운 기능 구현 등이 가능하지만<br>
 Mapbox도 원하는 경로를 나타내지 못하는 문제점이 있었다.<br>
+**사용자는 실제로 빨간 경로를 보행 가능하나 경로(파란 선)는 그렇지 못한 모습**
 ![경로 문제 발생](https://user-images.githubusercontent.com/41367134/99142797-d0cfd580-269b-11eb-83b3-323b453539d9.PNG)<br>
 이를 해결하기 위해 Mapbox측에 메일을 보냈고 Mapbox는 오픈소스 지도 프로젝트인 [OpenStreetMap](www.openstreetmap.org)을 기반으로 지도를 생성한다는 답장을 받을 수 있었다.<br>
 결과적으로, 해당 사이트와 [JOSM](https://josm.openstreetmap.de/)을 이용해 원하는 지역에 원하는 경로를 추가해 지도를 생성할 수 있었다.<br>
