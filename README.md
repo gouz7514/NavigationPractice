@@ -38,7 +38,7 @@ mapbox android SDK의 사용을 위해 해당 모듈을 `New Module`로 추가
         mapbox:mapbox_cameraTargetLat="37.321643"
         mapbox:mapbox_cameraTargetLng="127.126756"
         mapbox:mapbox_cameraZoom="16">
-    </com.mapbox.mapboxsdk.maps.MapView>
+</com.mapbox.mapboxsdk.maps.MapView>
 ```
 
 위치 업데이트를 위한 `LocationEngine` 개체의 사용
@@ -47,14 +47,14 @@ mapbox android SDK의 사용을 위해 해당 모듈을 `New Module`로 추가
 private LocationEngine locationEngine;
 ...
 @SuppressLint("MissingPermission")
-    private void initLocationEngine() {
-        locationEngine = LocationEngineProvider.getBestLocationEngine(this);
-        LocationEngineRequest request = new LocationEngineRequest.Builder(DEFAULT_INTERVAL_IN_MILLISECONDS)
-                .setPriority(LocationEngineRequest.PRIORITY_HIGH_ACCURACY)
-                .setMaxWaitTime(DEFAULT_MAX_WAIT_TIME).build();
-        locationEngine.requestLocationUpdates(request, callback, getMainLooper());
-        locationEngine.getLastLocation(callback);
-    }
+private void initLocationEngine() {
+    locationEngine = LocationEngineProvider.getBestLocationEngine(this);
+    LocationEngineRequest request = new LocationEngineRequest.Builder(DEFAULT_INTERVAL_IN_MILLISECONDS)
+        .setPriority(LocationEngineRequest.PRIORITY_HIGH_ACCURACY)
+        .setMaxWaitTime(DEFAULT_MAX_WAIT_TIME).build();
+    locationEngine.requestLocationUpdates(request, callback, getMainLooper());
+    locationEngine.getLastLocation(callback);
+}
 ```
 
 현재 위치 얻어오는 콜백 실행
@@ -101,94 +101,93 @@ class MainActivityLocationCallback implements LocationEngineCallback<LocationEng
                         Toast.LENGTH_SHORT).show();
             }
         }
-    }
+}
 ```
 
 #### 2. 2D 네비게이션
 **2.1 지도 상 클릭시 목적지로 설정 후 경로 생성**
 ```java
 @Override
-    public boolean onMapClick(@NonNull LatLng point) {
-        if (destinationMarker != null) {
-            mapboxMap.removeMarker(destinationMarker);
-        }
-        destinationMarker = mapboxMap.addMarker(new MarkerOptions().position(point));
-        destinatonPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());
-        originPosition = Point.fromLngLat(Lo, La);
-        getRoute_walking(originPosition, destinatonPosition);
-        getRoute_navi_walking(originPosition, destinatonPosition);
-        startButton.setEnabled(true);
-        startButton.setBackgroundResource(R.color.mapboxBlue);
-        arButton.setEnabled(true);
-        arButton.setBackgroundResource(R.color.mapboxBlue);
-        return false;
+public boolean onMapClick(@NonNull LatLng point) {
+    if (destinationMarker != null) {
+        mapboxMap.removeMarker(destinationMarker);
     }
+    destinationMarker = mapboxMap.addMarker(new MarkerOptions().position(point));
+    destinatonPosition = Point.fromLngLat(point.getLongitude(), point.getLatitude());
+    originPosition = Point.fromLngLat(Lo, La);
+    getRoute_walking(originPosition, destinatonPosition);
+    getRoute_navi_walking(originPosition, destinatonPosition);
+    startButton.setEnabled(true);
+    startButton.setBackgroundResource(R.color.mapboxBlue);
+    arButton.setEnabled(true);
+    arButton.setBackgroundResource(R.color.mapboxBlue);
+    return false;
+}
 ```
 **2.2 길찾기 메소드**
 ```java
 private void getRoute_walking(Point origin, Point destination) {
-        client = MapboxDirections.builder()
-                .origin(origin)
-                .destination(destination)
-                .overview(DirectionsCriteria.OVERVIEW_FULL)
-                .profile(DirectionsCriteria.PROFILE_WALKING) //길찾기 방법(본 프로젝트에서는 도보로 설정)
-                .accessToken(getString(R.string.access_token))
-                .build();
+    client = MapboxDirections.builder()
+        .origin(origin)
+        .destination(destination)
+        .overview(DirectionsCriteria.OVERVIEW_FULL)
+        .profile(DirectionsCriteria.PROFILE_WALKING) //길찾기 방법(본 프로젝트에서는 도보로 설정)
+        .accessToken(getString(R.string.access_token))
+        .build();
 
-        client.enqueueCall(new Callback<DirectionsResponse>() {
+    client.enqueueCall(new Callback<DirectionsResponse>() {
+        @Override
+        public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
+            if (response.body() == null) {
+                return;
+            } else if (response.body().routes().size() < 1) {
+                    return;
+            }
+            // Print some info about the route
+            currentRoute = response.body().routes().get(0);
+
+            int time = (int) (currentRoute.duration()/60);
+            double distances = (currentRoute.distance()/1000);
+
+            distances = Math.round(distances*100)/100.0;
+
+            Toast.makeText(getApplicationContext(), String.format("예상 시간 : " + String.valueOf(time)+" 분 \n" +
+                "목적지 거리 : " +distances+ " km"), Toast.LENGTH_LONG).show();
+        }
+        @Override
+        public void onFailure(Call<DirectionsResponse> call, Throwable throwable) {
+            Toast.makeText(MainActivity.this, "Error: " + throwable.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    });
+}
+
+private void getRoute_navi_walking (Point origin, Point destinaton) {
+    NavigationRoute.builder(this).accessToken(Mapbox.getAccessToken())
+        .profile(DirectionsCriteria.PROFILE_WALKING)
+        .origin(origin)
+        .destination(destinaton).
+        build().
+        getRoute(new Callback<DirectionsResponse>() {
             @Override
             public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
                 if (response.body() == null) {
                     return;
-                } else if (response.body().routes().size() < 1) {
+                } else if (response.body().routes().size() ==0) {
                     return;
                 }
-                // Print some info about the route
                 currentRoute = response.body().routes().get(0);
-                Log.e(TAG, "Distance: " + currentRoute.distance());
-
-                int time = (int) (currentRoute.duration()/60);
-                double distances = (currentRoute.distance()/1000);
-
-                distances = Math.round(distances*100)/100.0;
-
-                Toast.makeText(getApplicationContext(), String.format("예상 시간 : " + String.valueOf(time)+" 분 \n" +
-                        "목적지 거리 : " +distances+ " km"), Toast.LENGTH_LONG).show();
+                if (navigationMapRoute != null) {
+                    navigationMapRoute.removeRoute();
+                } else {
+                    navigationMapRoute = new NavigationMapRoute(null, mapView, mapboxMap, R.style.NavigationMapRoute);
+                }
+                navigationMapRoute.addRoute(currentRoute);
             }
             @Override
-            public void onFailure(Call<DirectionsResponse> call, Throwable throwable) {
-                Toast.makeText(MainActivity.this, "Error: " + throwable.getMessage(), Toast.LENGTH_SHORT).show();
+                public void onFailure(Call<DirectionsResponse> call, Throwable t) {
             }
         });
-    }
-
-    private void getRoute_navi_walking (Point origin, Point destinaton) {
-        NavigationRoute.builder(this).accessToken(Mapbox.getAccessToken())
-                .profile(DirectionsCriteria.PROFILE_WALKING)
-                .origin(origin)
-                .destination(destinaton).
-                build().
-                getRoute(new Callback<DirectionsResponse>() {
-                    @Override
-                    public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
-                        if (response.body() == null) {
-                            return;
-                        } else if (response.body().routes().size() ==0) {
-                            return;
-                        }
-                        currentRoute = response.body().routes().get(0);
-                        if (navigationMapRoute != null) {
-                            navigationMapRoute.removeRoute();
-                        } else {
-                            navigationMapRoute = new NavigationMapRoute(null, mapView, mapboxMap, R.style.NavigationMapRoute);
-                        }
-                        navigationMapRoute.addRoute(currentRoute);
-                    }
-                    @Override
-                    public void onFailure(Call<DirectionsResponse> call, Throwable t) {
-                    }
-                });
-    }
+}
 ```
 #### 3. 경로 추가
 네이버, 구글의 길 안내 API를 사용하지 않은 이유는 각각 다음과 같다.
@@ -197,35 +196,37 @@ private void getRoute_walking(Point origin, Point destination) {
 
 Mapbox를 사용하면 지도의 자유로운 styling, 자유로운 기능 구현 등이 가능하지만<br>
 Mapbox도 원하는 경로를 나타내지 못하는 문제점이 있었다.<br>
-**사용자는 실제로 빨간 경로를 보행 가능하나 경로(파란 선)는 그렇지 못한 모습**
+
+**사용자는 실제로 빨간 경로를 보행 가능하나 Mapbox의 경로(파란 선)는 그렇지 못한 모습**
 ![경로 문제 발생](https://user-images.githubusercontent.com/41367134/99142797-d0cfd580-269b-11eb-83b3-323b453539d9.PNG)<br>
 이를 해결하기 위해 Mapbox측에 메일을 보냈고 Mapbox는 오픈소스 지도 프로젝트인 [OpenStreetMap](https://www.openstreetmap.org)을 기반으로 지도를 생성한다는 답장을 받을 수 있었다.<br>
-결과적으로, 해당 사이트와 [JOSM](https://josm.openstreetmap.de/)을 이용해 원하는 지역에 원하는 경로를 추가해 지도를 생성할 수 있었다.<br>
+결과적으로, 해당 사이트와 [JOSM](https://josm.openstreetmap.de/)을 이용해 원하는 지역에 원하는 경로를 추가해 지도를 사용할 수 있었다.<br>
 [내가 기여한 OpenStreetMap의 변경 내역](https://www.openstreetmap.org/changeset/91498317#map=18/37.32117/127.12767)
 
 #### 4. 장소 자동완성
 학교나 내 주변 외에 목적지를 설정할 수 있도록 `Google Places API`를 사용해 장소 검색 기능을 구현함
 ```java
-Places.initialize(getApplicationContext(), "AIzaSyCVXwfS2pdm-KGbqvXc30RB8jGGJZ58mtc");
-        // Create a new Places client instance.
-        PlacesClient placesClient = Places.createClient(this);
-        // Initialize the AutocompleteSupportFragment.
-        AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
-                getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
-        // Specify the types of place data to return.
-        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME));
-        // Set up a PlaceSelectionListener to handle the response.
-        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-            @Override
-            public void onPlaceSelected(Place place) {
-                txtView.setText(String.valueOf(place.getName())); // edittext 부분에 목적지 설정됨
-            }
+Places.initialize(getApplicationContext(), "발급받은 내 API 키");
 
-            @Override
-            public void onError(@NonNull Status status) {
-                Log.i(TAG, "An error occurred: " + status);
-            }
-        });
+// Create a new Places client instance.
+PlacesClient placesClient = Places.createClient(this);
+// Initialize the AutocompleteSupportFragment.
+AutocompleteSupportFragment autocompleteFragment = (AutocompleteSupportFragment)
+        getSupportFragmentManager().findFragmentById(R.id.autocomplete_fragment);
+// Specify the types of place data to return.
+autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME));
+// Set up a PlaceSelectionListener to handle the response.
+autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+    @Override
+    public void onPlaceSelected(Place place) {
+        txtView.setText(String.valueOf(place.getName()));
+    }
+
+     @Override
+     public void onError(@NonNull Status status) {
+        Log.i(TAG, "An error occurred: " + status);
+     }
+});
 ```
 ![장소 자동완성](https://user-images.githubusercontent.com/41367134/99143374-2d34f400-26a0-11eb-81be-239e47ae5448.jpg)
 
